@@ -1,0 +1,6 @@
+# Conda manages the Python runtime; requirements.txt manages Python dependencies.
+# One project = one named environment. Never install into Conda base.
+name: fons-a1
+dependencies:
+  - python=3.12
+  - pip

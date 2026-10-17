@@ -1,0 +1,7 @@
+# Project runtime: Python 3.12 in fons-a1. Actual installed versions must be logged in Task 5.
+networkx>=3.3,<4
+numpy>=1.26,<3
+pandas>=2.2,<3
+matplotlib>=3.8,<4
+scipy>=1.13,<2
+pytest>=8,<10

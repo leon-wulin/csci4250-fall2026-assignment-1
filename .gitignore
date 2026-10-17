@@ -1,0 +1,25 @@
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+/results/cache/
+/results/logs/
+
+# Windows/editor
+Thumbs.db
+Desktop.ini
+.vscode/
+
+# Large downloaded network inputs: obtain from documented URLs
+/data/raw/
+
+# Temporary outputs and export clutter
+*.tmp
+*.log
+~$*.docx
+.DS_Store
+
+# Deliberately DO NOT ignore results/ and report/: curated evidence is trackable.
