@@ -1,0 +1,81 @@
+{
+  "nodes": 5242,
+  "edges": 14484,
+  "maxDegree": 81,
+  "top": [
+    {
+      "id": "21012",
+      "degree": 81
+    },
+    {
+      "id": "21281",
+      "degree": 79
+    },
+    {
+      "id": "12365",
+      "degree": 77
+    },
+    {
+      "id": "22691",
+      "degree": 77
+    },
+    {
+      "id": "6610",
+      "degree": 68
+    },
+    {
+      "id": "9785",
+      "degree": 68
+    }
+  ],
+  "legend": [
+    {
+      "id": "223",
+      "count": 295,
+      "color": "#0072b2"
+    },
+    {
+      "id": "18",
+      "count": 273,
+      "color": "#e69f00"
+    },
+    {
+      "id": "35",
+      "count": 243,
+      "color": "#009e73"
+    },
+    {
+      "id": "142",
+      "count": 235,
+      "color": "#cc79a7"
+    },
+    {
+      "id": "202",
+      "count": 226,
+      "color": "#d55e00"
+    },
+    {
+      "id": "297",
+      "count": 197,
+      "color": "#56b4e9"
+    },
+    {
+      "id": "301",
+      "count": 180,
+      "color": "#756bb1"
+    },
+    {
+      "id": "146",
+      "count": 158,
+      "color": "#8c6d31"
+    },
+    {
+      "id": "other",
+      "count": 3435,
+      "color": "#aeb5bb"
+    }
+  ],
+  "radius": "1.4+5 sqrt(k/kmax)",
+  "scale": 0.30109170745316766,
+  "scope": "full network; frozen GraphML topology verified"
+}

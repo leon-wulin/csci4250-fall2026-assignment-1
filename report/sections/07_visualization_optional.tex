@@ -1,9 +1,31 @@
 \section{Optional: Real-World Network Visualizations}
 
 \subsection{ca-GrQc Visualization}
-\pending{Insert a high-quality SVG/PDF-derived figure for ca-GrQc, explain the node/edge visual encodings, filtering choices, layout, legend, and export settings.}
+Figure~\ref{fig:grqc-network} visualizes the complete analyzed ca-GrQc coauthorship network from SNAP~\cite{snap-ca-grqc}. It retains all 5,242 authors and 14,484 edges after the previously documented removal of 12 self-loops. No visualization-only filtering is applied; disconnected components and the isolated vertex are retained.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth,height=0.77\textheight,keepaspectratio]{grqc_final.pdf}
+  \caption{ca-GrQc coauthorship network. Node radius increases with degree; distinct colors identify eight selected modularity communities, while gray combines all other communities. The legend gives community IDs and node counts. Six highest-degree authors are labeled by numeric source ID (ties broken by ID); these are identifiers, not personal names. Thin gray lines show coauthorship. Source: SNAP~\cite{snap-ca-grqc}.}
+  \label{fig:grqc-network}
+\end{figure}
+
+ForceAtlas~2 in Gephi 0.11.3 uses scaling 100, strong gravity enabled, gravity 1, Barnes--Hut approximation enabled with $\theta=1.2$, tolerance 1, and 15 threads; LinLog and overlap prevention are off. Strong gravity limits the spread of disconnected components without deleting vertices. The run was stopped manually; convergence is not asserted. Positions are for visualization and do not establish scientific similarity or geographic location.
+
+Unweighted modularity detection at resolution 1.0, with randomization enabled, returned 390 communities and displayed modularity 0.857. Eight communities receive distinct colors; the remaining 3,435 nodes are gray to limit the number of legend categories. Community IDs and colors were recovered from the saved Gephi project, rather than inferred from visual proximity. They do not identify named research fields. The realized layout and partition are preserved because interactive randomized reruns may differ.
+
+Final styling preserves all exported node positions and verifies every edge endpoint pair against the frozen GraphML. Node radius is $1.4+5\sqrt{k/81}$ on a 1,600-unit canvas; straight gray edges have width 0.65 and opacity 18\%. Sparse labels, subdued edges and a restricted categorical palette reduce clutter while preserving the full graph. Reproduction instructions, validation results and parameters are recorded in \texttt{results/gephi/GRQC\_REPRODUCIBILITY.md}.
 
 \subsection{Western States Power Grid Visualization}
-\pending{Insert the power-grid network visualization; document decluttering, layout, sizes/colors/labels, legend, and why the representation is appropriate.}
+Figure~\ref{fig:power-grid-network} displays the complete analyzed Power Grid network from Newman's collection~\cite{newman-power-grid}. All 4,941 nodes and 6,594 edges are retained; no filtering or aggregation is applied. Yifan Hu layout in Gephi 0.11.3 determines positions from connectivity, not physical geography. Node radius and blue intensity encode degree, emphasizing variation in local connectivity without implying transmission capacity, power flow, or engineering criticality.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth,height=0.77\textheight,keepaspectratio]{power_grid_final.pdf}
+  \caption{Western States Power Grid, shown as a complete undirected, unweighted network. Gray lines represent transmission links; node size and blue intensity increase with degree $k$. Callouts identify the six highest-degree nodes, with ties broken by numeric source ID. These identifiers are not facility names. Positions are topological rather than geographic. Source: Newman's network collection~\cite{newman-power-grid}.}
+  \label{fig:power-grid-network}
+\end{figure}
+
+The layout used optimal distance 100, relative strength 0.2, initial step size 20, step ratio 0.95, adaptive cooling enabled, and convergence threshold $10^{-4}$. The exported SVG preserves the realized coordinates, avoiding dependence on an identical rerun of the interactive layout. Final vector styling uses straight gray edges with 25\% opacity and a 0.55-unit stroke on the 1,600-unit source canvas. For $1\leq k\leq19$, node radius is $1.5+4.5\sqrt{(k-1)/18}$ source-canvas units; blue intensity varies linearly over the same normalized degree range. This radius mapping is a visual encoding, not a claim that area is directly proportional to degree. Labels, a degree legend, and reduced edge prominence limit clutter. The frozen GraphML, original coordinate-bearing SVG, styling/export scripts, parameter audit, and reproduction instructions are retained under \texttt{results/gephi/} and \texttt{scripts/}.
 
 % Delete this section's \input line from main.tex if you decide not to submit the bonus.

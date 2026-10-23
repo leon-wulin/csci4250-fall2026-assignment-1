@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {createRequire} from 'node:module';
+const modules=path.resolve(process.argv[2]);
+const require=createRequire(path.join(modules,'package.json'));
+const canvasLib=require('@napi-rs/canvas');
+globalThis.DOMMatrix=canvasLib.DOMMatrix;globalThis.Path2D=canvasLib.Path2D;globalThis.ImageData=canvasLib.ImageData;
+const pdfjs=await import(pathToFileURL(path.join(modules,'pdfjs-dist/legacy/build/pdf.mjs')));
+const folder=path.resolve(import.meta.dirname,'../results/gephi');
+const basename=process.argv[3]||'power_grid_final';
+const doc=await pdfjs.getDocument({data:new Uint8Array(fs.readFileSync(path.join(folder,basename+'.pdf'))),standardFontDataUrl:path.join(modules,'pdfjs-dist/standard_fonts').replaceAll('\\','/')+'/',useSystemFonts:true}).promise;
+if(doc.numPages!==1)throw Error('Expected one-page figure');
+const page=await doc.getPage(1),viewport=page.getViewport({scale:2});
+const canvas=canvasLib.createCanvas(viewport.width,viewport.height);
+await page.render({canvasContext:canvas.getContext('2d'),viewport}).promise;
+fs.writeFileSync(path.join(folder,basename+'_pdf_review.png'),canvas.toBuffer('image/png'));
+console.log('Rendered one-page PDF for visual review');

@@ -1,0 +1,72 @@
+[
+  {
+    "path": "data/processed/task2/grqc_real.graphml",
+    "bytes": 635429,
+    "sha256": "48C447ED653FECF5020AD5A8C353754336C5DF8694A475004550391B6CD88F32"
+  },
+  {
+    "path": "results/gephi/grqc_layout_base.svg",
+    "bytes": 3886081,
+    "sha256": "7171EE8F2D3D1B7608306AD9369D2ACF998888686CD04E61CE770BBF38F191AD"
+  },
+  {
+    "path": "results/gephi/network_visualizations.gephi",
+    "bytes": 474997,
+    "sha256": "258B05714E224C87B7D1D6DA7C4E55830521D6293F0A2755A2983305F2D86D1C"
+  },
+  {
+    "path": "results/gephi/grqc_final.svg",
+    "bytes": 2985352,
+    "sha256": "DDD7736C8F57750DEC0F7E5DDC81D20AA995035C425BDC12ACBFD29A9CA843DA"
+  },
+  {
+    "path": "results/gephi/grqc_final.pdf",
+    "bytes": 1294470,
+    "sha256": "3247C33A091573F7AC053810FE07EA69CDE3D805077C8387CBCC68E01D640336"
+  },
+  {
+    "path": "results/gephi/grqc_final.png",
+    "bytes": 1387778,
+    "sha256": "7513B25AFCFD9F783939C7421D6142048B6C60412539502F40BD45EC77DD8B89"
+  },
+  {
+    "path": "results/gephi/grqc_final_pdf_review.png",
+    "bytes": 1910151,
+    "sha256": "7370DDC5972A7DDC8DF31C054A36CE6AA7918A9A5E0BF0546A5CAF501E0DF349"
+  },
+  {
+    "path": "results/gephi/grqc_figure_scene.json",
+    "bytes": 1015677,
+    "sha256": "4F21E47F5B390A24128987901814F610D94FD3C642E5EFBEF4113A04B002E2A5"
+  },
+  {
+    "path": "results/gephi/grqc_style_audit.json",
+    "bytes": 1226,
+    "sha256": "E47EB7CE91018DF104F8C4E1C673C0D910B86490FB620B58FF88B0EB9B73CA19"
+  },
+  {
+    "path": "results/gephi/GRQC_REPRODUCIBILITY.md",
+    "bytes": 3832,
+    "sha256": "EF05D98BE3D2A15B0EDA9875F5F0BE04A73E8DD926B44A046C3110C96EBAAF96"
+  },
+  {
+    "path": "scripts/prepare_grqc_figure.ps1",
+    "bytes": 2465,
+    "sha256": "D72D3CDEBD6A4CE683E3B1AB56AD1DCB8F9D9C46D01D0B6609F30D9B47BF8423"
+  },
+  {
+    "path": "scripts/render_grqc_figure.mjs",
+    "bytes": 4897,
+    "sha256": "BF4250E092B4A7B1DFE04A75E5EED375CEC63B64B685074ACCBD8932BCBE15C9"
+  },
+  {
+    "path": "scripts/render_power_grid_preview.mjs",
+    "bytes": 1280,
+    "sha256": "5E220BBC60712A59CC669B39761B3B58753DE8528617B6687E603AD254B5CB26"
+  },
+  {
+    "path": "report/sections/07_visualization_optional.tex",
+    "bytes": 4598,
+    "sha256": "1FCF9E98CC3BADD38402FA854892F6A205526E1FE5327C1FC6B1F2786E9BBF8A"
+  }
+]

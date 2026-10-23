@@ -1,0 +1,36 @@
+{
+  "scope": "Full analyzed network; no filtering",
+  "nodes": 4941,
+  "status": "Draft, visual review required",
+  "layout": "Existing Gephi Yifan Hu coordinates",
+  "radiusMapping": "1.5 + 4.5 sqrt((k-kmin)/(kmax-kmin)) pixels",
+  "labeledNodes": [
+    {
+      "id": "2553",
+      "degree": 19
+    },
+    {
+      "id": "4458",
+      "degree": 18
+    },
+    {
+      "id": "831",
+      "degree": 14
+    },
+    {
+      "id": "3468",
+      "degree": 14
+    },
+    {
+      "id": "4345",
+      "degree": 14
+    },
+    {
+      "id": "2382",
+      "degree": 13
+    }
+  ],
+  "edges": 6594,
+  "maxDegree": 19.0,
+  "minDegree": 1.0
+}

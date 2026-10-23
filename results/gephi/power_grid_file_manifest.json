@@ -1,0 +1,62 @@
+[
+  {
+    "path": "data/processed/task2/power_real.graphml",
+    "bytes": 322589,
+    "sha256": "00FCA22AF6D255468521BB7D9C7CD9D26D943CE40FD79B6E9173E6AFE7D75B7A"
+  },
+  {
+    "path": "results/gephi/power_grid_layout_base.svg",
+    "bytes": 2419700,
+    "sha256": "973819058F9F90A8AFAE00BFB44C0D21695C2D60B7C71D6CDBB6D9E2C8AFB273"
+  },
+  {
+    "path": "results/gephi/power_grid_final.svg",
+    "bytes": 1939130,
+    "sha256": "ACAFC689B27B6FC04EEB80EA5D1BE79EA898FC9020DC34E9C856503A4F4FA9EA"
+  },
+  {
+    "path": "results/gephi/power_grid_final.pdf",
+    "bytes": 942174,
+    "sha256": "FDA75086BA0BF92CFA5EAD0A0B0571C023A08BA726AFAB66A0855B1CC17E6E62"
+  },
+  {
+    "path": "results/gephi/power_grid_final.png",
+    "bytes": 1465031,
+    "sha256": "8F0AD6794FBDF3E7C48A44821F8ABE7690C6C34AE3430EA41BA8A8A30DCA23DB"
+  },
+  {
+    "path": "results/gephi/power_grid_style_audit.json",
+    "bytes": 661,
+    "sha256": "F8A69F6F0BF33989B723BE3B01EC81DD5332695112029BEB69B261980E4C43AD"
+  },
+  {
+    "path": "results/gephi/power_grid_runtime_versions.json",
+    "bytes": 156,
+    "sha256": "039EBF4369BE817D0817A35F69F744B023D17C27D6AFA07CE4A5420260980BC3"
+  },
+  {
+    "path": "scripts/style_power_grid_svg.ps1",
+    "bytes": 5560,
+    "sha256": "7CEE41B6FFD0286B3D86615ACC21F0D459A5F9EEA6C3C6204F3A01E6AC6B93DD"
+  },
+  {
+    "path": "scripts/export_power_grid_pdf.mjs",
+    "bytes": 3580,
+    "sha256": "DF60324A9320FFDA019637F9AA787B8E42AD62E4FA8E95A68CA5B0B37836B8AE"
+  },
+  {
+    "path": "scripts/render_power_grid_preview.mjs",
+    "bytes": 1280,
+    "sha256": "5E220BBC60712A59CC669B39761B3B58753DE8528617B6687E603AD254B5CB26"
+  },
+  {
+    "path": "report/sections/07_visualization_optional.tex",
+    "bytes": 4598,
+    "sha256": "1FCF9E98CC3BADD38402FA854892F6A205526E1FE5327C1FC6B1F2786E9BBF8A"
+  },
+  {
+    "path": "results/gephi/POWER_GRID_REPRODUCIBILITY.md",
+    "bytes": 4993,
+    "sha256": "CA4EE5D0C88BB2F9CBEF52708B451C1D458733D7FE003A02FAF00BBF941300AC"
+  }
+]

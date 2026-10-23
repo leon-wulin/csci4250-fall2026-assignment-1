@@ -13,6 +13,7 @@ __pycache__/
 Thumbs.db
 Desktop.ini
 .vscode/
+.codex/
 
 # Large downloaded network inputs: obtain from documented URLs
 /data/raw/
