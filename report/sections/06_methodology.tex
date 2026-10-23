@@ -1,0 +1,47 @@
+\section{Task 5: Methodology and Reproducibility}
+
+\subsection{Data Sources and Preprocessing}
+The original ca-GrQc edge list was obtained from SNAP~\cite{snap-ca-grqc}, and Power Grid from Newman's collection~\cite{newman-power-grid}. Raw archives and extracted files are preserved under \path{data/raw/}. The ca-GrQc input is \path{data/raw/ca-GrQc.txt/CA-GrQc.txt}; Power Grid uses \path{data/raw/power/power.gml}. Input SHA-256 checksums, archive-integrity checks, parsing diagnostics, and original sizes are recorded in the input-audit files under \path{results/tables/}.
+
+ca-GrQc was read as a two-column integer edge list, ignoring comment and blank lines. Malformed records were checked; none were found. Reciprocal records were combined into single undirected edges without assigning weights. Its original 5,242 nodes and 14,496 edges include 12 self-loops. Only these loops were removed from the analysis copy, leaving 5,242 nodes and 14,484 edges. All vertices were retained, including node 12295, which became isolated. Power Grid was read from GML with \texttt{label=None}, preserving declared numeric node IDs. It contains no self-loops or duplicate edges, and remains at 4,941 nodes and 6,594 edges. Neither network required weight removal, imputation, or additional filtering. Both were analyzed as simple, undirected, unweighted graphs; the edge-list format cannot reveal any unlisted upstream isolates.
+
+The LCC is the component containing the most nodes, with ties resolved by the smallest numeric node ID. Only distance-based measures use its induced subgraph; degree, clustering, and component statistics retain the full graph.
+
+\subsection{Generation Settings}
+Each reference model uses the analyzed real network's node count. ER uses \texttt{gnp\_random\_graph} with $p=2M/[N(N-1)]$, calculated without pre-rounding, so $M$ is the expected rather than enforced edge count. BA uses \texttt{barabasi\_albert\_graph} with the default initial star. Its integer $m$ minimizes $|m(N-m)-M|$, choosing the smaller $m$ if tied. No edges were adjusted after generation. All four samples use seed 42; Table~\ref{tab:model-parameters} records parameters and realized sizes. Full-precision settings and edge-count differences are saved in \path{task2_config.json} and \path{results/tables/task2_model_parameters.csv}.
+
+\subsection{Software and Computation}
+Analysis used Python 3.12.15 in Conda environment \texttt{fons-a1}: NetworkX 3.7 for graphs, generation and clustering; NumPy 2.5.4 for moments; pandas 2.3.3 for tabular checks; SciPy 1.18.1 for fitting; Matplotlib 3.11.2 for figures; and pytest 9.1.1 for validation. The report was compiled with MiKTeX-pdfTeX 4.27 (MiKTeX 26.5), with automatic package installation and shell execution disabled.
+
+Exact unweighted breadth-first search was performed once per LCC node. The resulting eccentricities determine diameter, radius, and mean eccentricity and are cached for Task 3; no distance approximation was used. All variances use \texttt{ddof=0}. Clustering includes degree-zero/one nodes with coefficient zero; component-size observations are equally weighted components. Checks include degree sum $2M$, component-size sum $N$, LCC bounds, finite moments, deterministic model generation, and agreement between tables and cached observations. The latest independent verification passed all 55 tests.
+
+Fits are descriptive: maximum-likelihood candidates are compared by AIC on a common sample, with a chosen KS-distance screen of 0.10 rather than a significance test. ER degree references retain the generation probability; BA degree fits use discrete power-law tails, compared with lognormal alternatives. Eccentricity candidates use observed integer bounds. Clustering retains exact zero/one masses and uses reflected Gaussian KDE with Scott bandwidth when Beta fits fail the screen. Component fits exclude the LCC, require at least 50 observations and three distinct sizes, and are scaled by the non-LCC fraction; all reported moments still include the LCC. Failed, sparse, or degenerate fits are labeled N/A. Candidate diagnostics, parameters, and limitations are retained in \path{task3_config.json}, the fit tables, and \path{TASK3_REPRODUCIBILITY.md}.
+
+Matplotlib uses the non-interactive Agg backend. Eight three-panel composites cover all 24 distributions, with shared scales within each comparison. Figures are exported as vector PDF and 200-dpi PNG; numerical samples, probabilities, and clustering bins are saved separately. Regenerated figures require renewed visual review.
+
+\subsection{Reproduction Instructions}
+Use the original inputs at the paths above and the recorded package versions. From the project root, run the following PowerShell commands. The Conda path is specific to the verified workstation and may be replaced with the corresponding local installation. A project-local temporary directory avoids pytest access conflicts.
+
+\begingroup\footnotesize
+\begin{verbatim}
+& .\scripts\preflight.ps1
+$cx = 'C:\ProgramData\anaconda3\Scripts\conda.exe'
+$env:TEMP = Join-Path $PWD 'results/cache/reproduction_tmp'
+$env:TMP = $env:TEMP
+New-Item -ItemType Directory -Force $env:TEMP | Out-Null
+& $cx run -n fons-a1 --no-capture-output python `
+  src/run_task2.py
+& $cx run -n fons-a1 --no-capture-output python `
+  scripts/refresh_task2_manifest.py --write
+& $cx run -n fons-a1 --no-capture-output python `
+  src/run_task3.py
+& $cx run -n fons-a1 --no-capture-output python `
+  src/run_task3.py --verify-only
+& .\report\build_report.ps1
+\end{verbatim}
+\endgroup
+
+Task 2 audits the inputs, applies preprocessing, generates models, and computes or reuses validated exact caches. The manifest-refresh utility validates the six saved graphs, caches and numerical tables before updating the output checksums required by Task 3; it preserves the previous manifest. Task 3 then computes distributions, fits and figures without regenerating models or shortest paths. Verify before rebuilding the report: saved provenance includes the report state at calculation time. After a report edit, regenerate Task 3 outputs to record the new state before using its verification mode; do not silently relabel stale provenance. To reproduce only Task 3 from unchanged Task 2 outputs, omit the Task 2 and manifest-refresh commands.
+
+The reproducibility materials comprise \path{src/}, \path{scripts/}, \path{tests/}, both configuration files, \path{environment.yml}, \path{requirements.txt}, and the two task-specific reproduction guides. Include the source/audit metadata, six processed GraphML files, required caches, numerical CSV/JSON files, figures, and LaTeX sources with the supporting materials. Caches are Git-ignored locally, so a supplement must include them explicitly or regenerate them. The dependency file gives compatible ranges; the exact versions above and machine-readable version records identify the analyzed environment. Numerical tables retain full precision; report rounding is for presentation only.
+\clearpage

@@ -1,0 +1,23 @@
+\clearpage
+\section{Network Generation: ER and BA Counterparts}
+
+For each real network with $N$ nodes and $M$ edges, the Erd\H{o}s--R\'enyi (ER) model was generated using $p=2M/[N(N-1)]$. The Barab\'asi--Albert (BA) model used the integer attachment parameter $m$ giving the closest available edge count. All models used random seed 42. For ca-GrQc, 12 self-loops were removed from the analysis copy before setting the model parameters, leaving 5,242 nodes and 14,484 edges.
+
+\begin{table}[!htbp]
+\centering
+\caption{\textbf{Reference-model parameters and generated graph sizes.}}
+\label{tab:model-parameters}
+\small
+\begin{tabularx}{\linewidth}{@{}Xlrrrl@{}}
+\toprule
+Base network & Model & Nodes & Edges & Seed & Parameter \\
+\midrule
+ca-GrQc & ER & 5,242 & 14,176 & 42 & $p=0.001054405$ \\
+ca-GrQc & BA & 5,242 & 15,717 & 42 & $m=3$ \\
+Power Grid & ER & 4,941 & 6,431 & 42 & $p=0.000540303$ \\
+Power Grid & BA & 4,941 & 4,940 & 42 & $m=1$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The standard BA model could not closely match the Power Grid's 6,594 edges: $m=1$ produced 4,940 edges (25.08\% fewer), while $m=2$ would produce 9,878 edges. Thus, $m=1$ was selected as the closer option.

@@ -1,0 +1,17 @@
+model,value,probability,selected,kind
+binomial_reference,0.0,0.003969756568542309,True,integer_value
+binomial_reference,1.0,0.021960566289253122,True,integer_value
+binomial_reference,2.0,0.060730985060886734,True,integer_value
+binomial_reference,3.0,0.11194455349057823,True,integer_value
+binomial_reference,4.0,0.15472980222132338,True,integer_value
+binomial_reference,5.0,0.1710614067546703,True,integer_value
+binomial_reference,6.0,0.15756723930931194,True,integer_value
+binomial_reference,7.0,0.12437986215314156,True,integer_value
+binomial_reference,8.0,0.08589330260071182,True,integer_value
+binomial_reference,9.0,0.05271485620967131,True,integer_value
+binomial_reference,10.0,0.029111612431813927,True,integer_value
+binomial_reference,11.0,0.01461247546172062,True,integer_value
+binomial_reference,12.0,0.006722173801169684,True,integer_value
+binomial_reference,13.0,0.0028539773734527207,True,integer_value
+binomial_reference,14.0,0.001124924999003074,True,integer_value
+binomial_reference,15.0,0.00041376171985163523,True,integer_value

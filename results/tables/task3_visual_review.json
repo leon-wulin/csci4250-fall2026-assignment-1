@@ -1,0 +1,97 @@
+{
+  "checks": [
+    "readable titles, axes, legends and notes",
+    "no clipping or legend/data overlap",
+    "zero/one clustering masses and LCC observations visible",
+    "curves match saved scopes and metadata"
+  ],
+  "figures": [
+    {
+      "figure_id": "grqc__degree",
+      "pdf": "results/plots/task3/grqc__degree.pdf",
+      "pdf_review_render": "results/logs/task3_review/grqc__degree-1.png",
+      "pdf_sha256": "e73bee0b1b521b0d69b856e200046d1c9308a3db353b206672986e6aaba686f1",
+      "png": "results/plots/task3/grqc__degree.png",
+      "png_sha256": "8909fc5ca94fa9eb25919574188c96aa3ad799002ce3eab8092b1ccd3d5e5805",
+      "render_sha256": "0680c3e3342ab2a8819187d766b1743857327643969771942bf2dfa321c8686a",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "grqc__eccentricity",
+      "pdf": "results/plots/task3/grqc__eccentricity.pdf",
+      "pdf_review_render": "results/logs/task3_review/grqc__eccentricity-1.png",
+      "pdf_sha256": "8130d6656f998226465ccbab475aacfc289d338ec5dce342f005b246c5bcd420",
+      "png": "results/plots/task3/grqc__eccentricity.png",
+      "png_sha256": "c75eee1364f018410204e2bd0d11644f0eb4457f8255fec19d47b9977e7e9799",
+      "render_sha256": "d7050c099439f3ded50df13473df6315cae2fead70f74833179f64242c7e66b2",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "grqc__clustering",
+      "pdf": "results/plots/task3/grqc__clustering.pdf",
+      "pdf_review_render": "results/logs/task3_review/grqc__clustering-1.png",
+      "pdf_sha256": "0b43d3e2c0b43ba3392d97099e7424f760f63c6b555c77868e8f130107c028df",
+      "png": "results/plots/task3/grqc__clustering.png",
+      "png_sha256": "465d4395354f8766517c62905eb181ec03aaaab384356619e0ef8b86e3330c97",
+      "render_sha256": "c480ff0f8bb04cf0b2c956a5d8298569b9e88f876e01a6ff4c8be36efd19e710",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "grqc__component_size",
+      "pdf": "results/plots/task3/grqc__component_size.pdf",
+      "pdf_review_render": "results/logs/task3_review/grqc__component_size-1.png",
+      "pdf_sha256": "8f5672145dd2c332868d1a1eb907d5079565ddaef07368cc8e4d53ad2f11c6f7",
+      "png": "results/plots/task3/grqc__component_size.png",
+      "png_sha256": "279f9123072c8ef4a4eb3a7f2b475690da5a44e1d5a11ac86c7ccfa6a789c4c5",
+      "render_sha256": "d3ad4f2f6204966870fd3526cc5e08b3db98431a1daafebd8ee660ea63fbadda",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "power__degree",
+      "pdf": "results/plots/task3/power__degree.pdf",
+      "pdf_review_render": "results/logs/task3_review/power__degree-1.png",
+      "pdf_sha256": "cb540c199d55dec2ebc44ef87f810726c5b466857d59a86fc1b5f175a7956503",
+      "png": "results/plots/task3/power__degree.png",
+      "png_sha256": "862819228327606a2661701097b47b6ebabd85b816e4808989d1e74e2eb50f81",
+      "render_sha256": "873f29ec6c4ac38c3898c3fd8d4fc81adc82c85dd30a9c5086d728493f4ba26c",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "power__eccentricity",
+      "pdf": "results/plots/task3/power__eccentricity.pdf",
+      "pdf_review_render": "results/logs/task3_review/power__eccentricity-1.png",
+      "pdf_sha256": "ae6a4aa04e5f726df399618be7207f4b9f35e6a24d0011424f9d9d1a76d91108",
+      "png": "results/plots/task3/power__eccentricity.png",
+      "png_sha256": "7a4c0d3428d2fe496c269f65ab6933e983ba34ba9eaa8d7f2ad5a51d20bc7800",
+      "render_sha256": "9902d399a7605758ac9a515ddccab1e7511e6c35bd0af24c68c3dff4130b9e89",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "power__clustering",
+      "pdf": "results/plots/task3/power__clustering.pdf",
+      "pdf_review_render": "results/logs/task3_review/power__clustering-1.png",
+      "pdf_sha256": "b26976a53b1893932ad2544a3245e24b03a454ca2e8f6120da40a0b51dd7ab58",
+      "png": "results/plots/task3/power__clustering.png",
+      "png_sha256": "756589e01bec6b730a93c62ecf6832c9405d8d62440bc1c2b90f1c18a3e10238",
+      "render_sha256": "bf58b5043fb08585afe19026fb3d7404709c6c10328e099fe7ad66c0e6c31533",
+      "status": "PASS"
+    },
+    {
+      "figure_id": "power__component_size",
+      "pdf": "results/plots/task3/power__component_size.pdf",
+      "pdf_review_render": "results/logs/task3_review/power__component_size-1.png",
+      "pdf_sha256": "4ca3910fd155832c3abae7ef4a9bea622fc913e5cb25ae297258d2696d9daaf2",
+      "png": "results/plots/task3/power__component_size.png",
+      "png_sha256": "8d2801dd85bbe495c8317fb03b461f776d1882c097706457bf1d854bd2ded375",
+      "render_sha256": "ab59e3ca6612068f659c631a1121fefdf731e14bed4d0cbbf867997330109186",
+      "status": "PASS"
+    }
+  ],
+  "method": "All final PNGs and Poppler-rendered PDF pages visually inspected in the conversation.",
+  "pdfs_rendered_and_inspected": 8,
+  "pngs_inspected": 8,
+  "reviewed_utc": "2026-10-22T04:15:03.224839+00:00",
+  "reviewer": "assistant",
+  "status": "PASS",
+  "student_independent_review": "pending"
+}

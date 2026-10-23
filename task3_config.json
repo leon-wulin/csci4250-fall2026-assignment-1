@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "population_variance_ddof": 0,
+  "clustering_interior_bins": 20,
+  "minimum_fit_samples": 50,
+  "minimum_tail_samples": 100,
+  "minimum_tail_distinct_values": 5,
+  "descriptive_ks_screen": 0.10,
+  "clustering_fallback": "boundary-reflected Gaussian KDE; Scott bandwidth; descriptive smoothing, not parametric acceptance",
+  "png_dpi": 200,
+  "figure_size_inches": [15, 5.8],
+  "normalization": "probability per integer value; clustering interior probability per bin with separate endpoint masses",
+  "fit_policy": "MLE and descriptive AIC/KS; no iid significance or power-law confirmation claimed",
+  "regenerate_models": false,
+  "recompute_shortest_paths": false
+}

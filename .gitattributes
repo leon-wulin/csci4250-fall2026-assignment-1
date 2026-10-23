@@ -1,0 +1,2 @@
+# Preserve exact artifact/source bytes across Windows checkouts: manifests use SHA-256.
+* -text

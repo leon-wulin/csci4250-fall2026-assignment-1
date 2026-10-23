@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "grqc_self_loops": "remove",
+  "approval": "Student explicitly approved removing 12 self-loops from the derived copy on 2026-10-18; preserve raw files and all vertices.",
+  "er_generator": "gnp_random_graph",
+  "ba_initial_graph": "NetworkX default star",
+  "lcc_tie_break": "smallest numeric node ID",
+  "degree_variance_ddof": 0,
+  "distance_method": "exact unweighted BFS once per LCC node"
+}

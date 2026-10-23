@@ -1,0 +1,162 @@
+[
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      5242,
+      5242,
+      5242
+    ],
+    "figure_id": "grqc__degree",
+    "metric": "degree",
+    "panels": [
+      "grqc_real",
+      "grqc_er",
+      "grqc_ba"
+    ],
+    "pdf": "results/plots/task3/grqc__degree.pdf",
+    "png": "results/plots/task3/grqc__degree.png",
+    "x_scale": "symlog (zero preserved)",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      4158,
+      5223,
+      5242
+    ],
+    "figure_id": "grqc__eccentricity",
+    "metric": "eccentricity",
+    "panels": [
+      "grqc_real",
+      "grqc_er",
+      "grqc_ba"
+    ],
+    "pdf": "results/plots/task3/grqc__eccentricity.pdf",
+    "png": "results/plots/task3/grqc__eccentricity.png",
+    "x_scale": "linear",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      5242,
+      5242,
+      5242
+    ],
+    "figure_id": "grqc__clustering",
+    "metric": "clustering",
+    "panels": [
+      "grqc_real",
+      "grqc_er",
+      "grqc_ba"
+    ],
+    "pdf": "results/plots/task3/grqc__clustering.pdf",
+    "png": "results/plots/task3/grqc__clustering.png",
+    "x_scale": "linear",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      355,
+      19,
+      1
+    ],
+    "figure_id": "grqc__component_size",
+    "metric": "component_size",
+    "panels": [
+      "grqc_real",
+      "grqc_er",
+      "grqc_ba"
+    ],
+    "pdf": "results/plots/task3/grqc__component_size.pdf",
+    "png": "results/plots/task3/grqc__component_size.png",
+    "x_scale": "log",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      4941,
+      4941,
+      4941
+    ],
+    "figure_id": "power__degree",
+    "metric": "degree",
+    "panels": [
+      "power_real",
+      "power_er",
+      "power_ba"
+    ],
+    "pdf": "results/plots/task3/power__degree.pdf",
+    "png": "results/plots/task3/power__degree.png",
+    "x_scale": "symlog (zero preserved)",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      4941,
+      4504,
+      4941
+    ],
+    "figure_id": "power__eccentricity",
+    "metric": "eccentricity",
+    "panels": [
+      "power_real",
+      "power_er",
+      "power_ba"
+    ],
+    "pdf": "results/plots/task3/power__eccentricity.pdf",
+    "png": "results/plots/task3/power__eccentricity.png",
+    "x_scale": "linear",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      4941,
+      4941,
+      4941
+    ],
+    "figure_id": "power__clustering",
+    "metric": "clustering",
+    "panels": [
+      "power_real",
+      "power_er",
+      "power_ba"
+    ],
+    "pdf": "results/plots/task3/power__clustering.pdf",
+    "png": "results/plots/task3/power__clustering.png",
+    "x_scale": "linear",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  },
+  {
+    "all_text_inside_canvas": true,
+    "empirical_observations_plotted": [
+      1,
+      387,
+      1
+    ],
+    "figure_id": "power__component_size",
+    "metric": "component_size",
+    "panels": [
+      "power_real",
+      "power_er",
+      "power_ba"
+    ],
+    "pdf": "results/plots/task3/power__component_size.pdf",
+    "png": "results/plots/task3/power__component_size.png",
+    "x_scale": "log",
+    "y_scale": "log",
+    "zero_count_bins_saved_not_plotted_on_log_y": true
+  }
+]

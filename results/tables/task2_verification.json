@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "CSV equals JSON",
+    "node-level eccentricities reproduce all distance summaries",
+    "GraphML IDs/isolates/topology preserved",
+    "whole-graph degrees/components verified",
+    "all cache identities and artifact hashes valid",
+    "model counts/deviations consistent"
+  ],
+  "models": 4,
+  "networks": 6,
+  "status": "PASS"
+}

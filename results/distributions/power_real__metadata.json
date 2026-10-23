@@ -1,0 +1,368 @@
+{
+  "complete": true,
+  "distribution_and_fit_seconds": 0.24741589999757707,
+  "identity": {
+    "config": {
+      "clustering_fallback": "boundary-reflected Gaussian KDE; Scott bandwidth; descriptive smoothing, not parametric acceptance",
+      "clustering_interior_bins": 20,
+      "descriptive_ks_screen": 0.1,
+      "figure_size_inches": [
+        15,
+        5.8
+      ],
+      "fit_policy": "MLE and descriptive AIC/KS; no iid significance or power-law confirmation claimed",
+      "minimum_fit_samples": 50,
+      "minimum_tail_distinct_values": 5,
+      "minimum_tail_samples": 100,
+      "normalization": "probability per integer value; clustering interior probability per bin with separate endpoint masses",
+      "png_dpi": 200,
+      "population_variance_ddof": 0,
+      "recompute_shortest_paths": false,
+      "regenerate_models": false,
+      "schema_version": 1
+    },
+    "protected_inputs": {
+      "AGENTS.md": "84c19af2c115d12d20de270eb0e61882ab42211e8e2042855a8381d91a01089a",
+      "Assignment 1.docx": "1e8e14dfbe5873da18623e763380bfd899b83e2e25ed076d0e7c8e389482b026",
+      "Assignment1_Fall2026_Network_Analysis_and_Visualization.pdf": "44b3dd22454db412feda16b74d5bcd81f7415d3ba74c212e329df0081164417c",
+      "data/processed/task2/grqc_ba.graphml": "81cfb1fcb499a6fbc2a7bc23a3d30077612b85383b81bcc3b1cd13295fb40b92",
+      "data/processed/task2/grqc_er.graphml": "225a5e67b451b80d48e1de6617834dd6d5ed4e67e4bcd2a64243282f35cc5da9",
+      "data/processed/task2/grqc_real.graphml": "48c447ed653fecf5020ad5a8c353754336c5df8694a475004550391b6cd88f32",
+      "data/processed/task2/power_ba.graphml": "710aabee2509a8972da7ecad1d2c5e7f0135d56dbea8baf943090832d384027b",
+      "data/processed/task2/power_er.graphml": "5516bf56a9ced2c90ebaf362ed52093b620523a245a484f5f95a5409a47785c1",
+      "data/processed/task2/power_real.graphml": "00fca22af6d255468521bb7d9c7cd9d26d943ce40fd79b6e9173e6afe7d75b7a",
+      "data/raw/ca-GrQc.txt.gz": "a254442cdf5d684712578b630c2e0d7543518ab154ef2341cabb607572ce7230",
+      "data/raw/ca-GrQc.txt/CA-GrQc.txt": "f8ce6e931e068b878044b783da99ef603f566c87bcbce7991cd53720879f1660",
+      "data/raw/power.zip": "866f2301d113928973f40c8e1ca34be84efa2ad8209cd9d0cf7c16e972167b7d",
+      "data/raw/power/power.gml": "f9b4aba8c2b5fd60e52afe745044cd83ed73eac6689e0e094fdd6446b5a0a816",
+      "data/raw/power/power.txt": "07077011d13eb18f9be5804873eab596439bf147def4e86fb1f0aedfabf2e473",
+      "report/README.md": "db54ae28ded9ec4dab18f32361c2a6b596aaab435f5ff3da6671e9ed97409c6f",
+      "report/build_report.ps1": "879a15eceef47880f2422756a9d9265534705566d3b80df62bc6a3585491ad41",
+      "report/main.tex": "f6ea5902442b881d85837646126a31f824c6a5ad474536d84771f79b0ac64934",
+      "report/report.pdf": "a78736564ac043457674d23163f2b0a3b78e57c4a11e1d4f161125dccca8b86a",
+      "report/sections/01_real_networks.tex": "51e911628a579a4f988d87af06efa6542abac9685fe40fbefbf6bce39e2e687a",
+      "report/sections/02_model_generation.tex": "b5566fbddbff2e79e7fad0436868552faff55c8d8a68ec46bdb2fe91a1d21fc0",
+      "report/sections/03_global_properties.tex": "85c5543056bd31ced33a007a15709aca068dc96ff8b245b0a18000a890e5bfd7",
+      "report/sections/04_distributions.tex": "e71240f690f7391bb1e01097c9b9572bd072fe78bd91b45259e8a014b63159d1",
+      "report/sections/05_comparison.tex": "705a213f957344da0dbeb30242aab576643858b2b95ad3fafb9e229d84bc0e3f",
+      "report/sections/06_methodology.tex": "c1a7ee75ec0633013b4095135110235bd2d6def1117a3621cbeed97b58a1bcbb",
+      "report/sections/07_visualization_optional.tex": "2e0ffe3024028d708b19af606e9c9cb46b09b140cdac3669b9aa9bd04a1e0df2",
+      "report/sections/references.tex": "2099ed39d9c1cd67b3bbde6e3f69a4ecbb1d7c68b1ad196d86ef979d3b517b55",
+      "results/cache/components_grqc_ba.csv": "9e93812b3476117d53bb421387352f9cf239e8bfd521d2206f1c4469b9f50287",
+      "results/cache/components_grqc_er.csv": "35bede57b017b308bbfaf4dfc257a16fd4b1eaabae16ab0eb1f91cd7542f6b1a",
+      "results/cache/components_grqc_real.csv": "166b0b96a9102c8d3df7380cc90f8da1734d84ecc36f993f933f2eaefb2bc02d",
+      "results/cache/components_power_ba.csv": "e853f8813dc777fb95a77756f815629e410cd94d908282a1eeeb3ce85c6b0f6c",
+      "results/cache/components_power_er.csv": "8715decf0c09ed73b55fa6a20d3989a0d05b3cae743c7712b38093e464c86088",
+      "results/cache/components_power_real.csv": "e853f8813dc777fb95a77756f815629e410cd94d908282a1eeeb3ce85c6b0f6c",
+      "results/cache/degrees_grqc_ba.csv": "207444c44b58605b88976c4c8ca87b90e1051c9686a7ff6cdd8387ad3e270648",
+      "results/cache/degrees_grqc_er.csv": "4fa38b64414f40374bf97e7199153439737e676fd07802c8ceb77a2b70eecbd4",
+      "results/cache/degrees_grqc_real.csv": "c5682aeb6e74b40774236e752f3bd79af7be840c899ca6a3a20b91e679a021ad",
+      "results/cache/degrees_power_ba.csv": "d5a9b2d7b13a47cdc345365886df3c020987b9a04c349b443175a11c544dc157",
+      "results/cache/degrees_power_er.csv": "3cffc6865225c829bfb466b59692daf9ba92bc8a45b174f32523dc5b012be30e",
+      "results/cache/degrees_power_real.csv": "46acacb9ad643e5e31010ea2fa4ed93429db47a9f1a14a420fac3314fd6a45eb",
+      "results/cache/eccentricity_grqc_ba.csv": "c734938db3809e8e086fdde7c77375741748d0b6d10f13e70f62ff1184c07602",
+      "results/cache/eccentricity_grqc_er.csv": "25c1734dcc5d1ced3058af86ae82814ae6f4af47109b52a456b05c6ec276d4a0",
+      "results/cache/eccentricity_grqc_real.csv": "d6e5a0934105d94bfae122d74fcab2f0e6c9a1db19594225ff4315de9b03ecec",
+      "results/cache/eccentricity_power_ba.csv": "d728ea1d70367bd52be42cf61e2402b6657407403915314b875243f7080153d2",
+      "results/cache/eccentricity_power_er.csv": "760c768207473c852e4e007f2176afb7521bff4784484b0a3dc77c130785dcdd",
+      "results/cache/eccentricity_power_real.csv": "5a56fe517a0ea4673b9f5ea2feaef35971414863029e170b382eb1530b9ce67e",
+      "results/cache/task2_grqc_ba.json": "5ca092dc4394d060b50caa745b27ec42dfd8a7d9aacc6523aea1546320fce7ea",
+      "results/cache/task2_grqc_er.json": "dd69d1a65e4ecd7a2eb283a942035c528544c33b18ee277e0ec60ada62e666ad",
+      "results/cache/task2_grqc_real.json": "9e973df8b79b529b3fa7304296bd26cfbaafca605f96731a778aab9f12d04fd8",
+      "results/cache/task2_power_ba.json": "b84635bb620aaf6346a9f755b8670c262c2e98a1c346ad7ef6ae3468d1768abc",
+      "results/cache/task2_power_er.json": "8edc9cfa8ab61c7a0992985d3f9da2e66afe57640c2bba394e17d3a433585ad6",
+      "results/cache/task2_power_real.json": "e0cabb563a5ea7512111aac27eebb1b5ae5f32586eb43226e08c166a8b3102d9",
+      "results/logs/task2_execution.log": "4a4813bbf9fc73944139585f5f15001e5271666793ed7b3ff2a133826fe3c198",
+      "results/logs/task2_tests.txt": "ec39778a0aa465288245b7e4696ce2905e61f478e3baf7de74f310e90249f61d",
+      "results/tables/task2_global_properties.csv": "f69435a778ff69c09dc6fde700d2bb3c019df0590333817883d3cf1e903ef36c",
+      "results/tables/task2_global_properties.json": "c04950ed379917b1880a7f2c4a9cabbc34aa0f88fda875d6b4c2ccc6b09f30b2",
+      "results/tables/task2_input_audit.json": "45a2bb57d93467030122cda43092f126b281e701133a1e4a5ea42a57ff6af93d",
+      "results/tables/task2_model_parameters.csv": "3383dcc530cc6096d8e1b26aa6ee27b4c727c6e45b9e7269b76b8c721c13c5ed",
+      "results/tables/task2_preprocessing.json": "f97438cd32a4d3fae2f8590c31e10dad432bfd4be52a6b40f2624bd984770eb0",
+      "results/tables/task2_verification.json": "c4dc5e6202c79db8f15ccf5f01da7fc01d1784225d94e43ab824b35a63e87d29",
+      "src/run_task2.py": "0ac93cce412b056f6fe284548719c70639cd31e6d40cc657312df9c739ed1332",
+      "src/task2_core.py": "f0814e341ab32adb758c52930183808e28e776798a42f5320b77b44547523d87",
+      "task2_config.json": "153b612a0315c53dd8609d9d41b3362cb3b02da95b6c77c673ca5256eb9937be",
+      "tests/test_task2.py": "0c0fa2490ddbe371d9d10bd07fe6ab34a131028334b0fb217fbcd541802f0e4c"
+    },
+    "schema": "task3-v1",
+    "source_sha256": {
+      "src/run_task3.py": "116e2674254c6044be17bf6c22045395d62daa45e2bb11d007d95d2fcd4a8e92",
+      "src/task3_distributions.py": "a285ffb81fa241da9a0ca3a29f34f41afe2815c7a65fe694314df0b02021d3df",
+      "src/task3_fitting.py": "1c08420cab5e3c3e57b6db03464d9c887c5f91319822c4b71a19cfadab8b7caa",
+      "src/task3_plotting.py": "e7a4ee8f9e7eea1018a16e1d7294e99179b29a75356ac0ec0fda70a644b35321"
+    },
+    "versions": {
+      "matplotlib": "3.11.2",
+      "networkx": "3.7",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1"
+    }
+  },
+  "metrics": {
+    "clustering": {
+      "files": {
+        "bins": "results/distributions/power_real__clustering__plot_bins.csv",
+        "curves": "results/distributions/power_real__clustering__fitted_curves.csv",
+        "frequencies": "results/distributions/power_real__clustering__frequencies.csv",
+        "samples": "results/distributions/power_real__clustering__samples.csv"
+      },
+      "fit": {
+        "aic": null,
+        "candidates": [
+          {
+            "aic": -837.236051786885,
+            "ks": 0.14683217748397792,
+            "log_likelihood": 420.6180258934425,
+            "method": "zero_one_inflated_beta",
+            "n_fit": 730,
+            "parameter_count": 2,
+            "parameters": {
+              "a": 1.698213166364764,
+              "b": 5.344568192539252,
+              "p0": 0.8075288403157256,
+              "p1": 0.0447277878971868
+            }
+          },
+          {
+            "aic": null,
+            "ks": 0.15129213305120182,
+            "log_likelihood": null,
+            "method": "reflected_kde_mixture",
+            "n_fit": 730,
+            "parameter_count": null,
+            "parameters": {
+              "bandwidth": 0.04107366144522193,
+              "bandwidth_rule": "sample standard deviation times n_interior^(-1/5)",
+              "p0": 0.8075288403157256,
+              "p1": 0.0447277878971868
+            }
+          }
+        ],
+        "endpoint_masses": {
+          "p0": 0.8075288403157256,
+          "p1": 0.0447277878971868
+        },
+        "fit_scope": "interior 0<C<1; separate empirical 0/1 atoms",
+        "ks": 0.15129213305120182,
+        "log_likelihood": null,
+        "method": "reflected_kde_mixture",
+        "n_fit": 730,
+        "parameter_count": null,
+        "parameters": {
+          "bandwidth": 0.04107366144522193,
+          "bandwidth_rule": "sample standard deviation times n_interior^(-1/5)",
+          "p0": 0.8075288403157256,
+          "p1": 0.0447277878971868
+        },
+        "reason": "Beta candidate failed descriptive screen; use boundary-reflected Gaussian KDE with Scott bandwidth. Smoothing only, not parametric acceptance; no KDE AIC claim.",
+        "scope_weight": 1.0,
+        "status": "descriptive_smoother"
+      },
+      "graph_edges": 6594,
+      "graph_nodes": 4941,
+      "sha256": {
+        "bins": "62bae5480aa69d56a546415c2ed0021abf33e0004d6c094a06c48d56f9a23bee",
+        "curves": "b9edcb974aef7532c670230df9b6755dd47efad0aab512a3161b75ddb2c60285",
+        "frequencies": "5931b3102c779f2916963a35cf90f500826ba6cdd2b53db0032b110f9509aedc",
+        "samples": "f0196855e80acc42629454cc17a214a828e53679aca1096a81acacc3315b435f"
+      },
+      "statistics": {
+        "maximum": 1.0,
+        "mean": 0.08010361108159714,
+        "minimum": 0.0,
+        "n_samples": 4941,
+        "one_count": 221,
+        "population_variance": 0.05025993544008121,
+        "zero_count": 3990
+      }
+    },
+    "component_size": {
+      "files": {
+        "curves": "results/distributions/power_real__component_size__fitted_curves.csv",
+        "frequencies": "results/distributions/power_real__component_size__frequencies.csv",
+        "samples": "results/distributions/power_real__component_size__samples.csv"
+      },
+      "fit": {
+        "candidates": [],
+        "fit_scope": "whole graph, one observation per component",
+        "method": "N/A",
+        "n_fit": 0,
+        "parameters": {},
+        "reason": "One component: one observation and zero variance; fitting a shape is not meaningful.",
+        "scope_weight": 0.0,
+        "status": "N/A"
+      },
+      "graph_edges": 6594,
+      "graph_nodes": 4941,
+      "sha256": {
+        "curves": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772",
+        "frequencies": "7d0eea9b780303a6499a4861fd63ad875d48b91a25197128624b23935c8b58ef",
+        "samples": "0a9ccad594da97ae768e67409327b0b5c21ab74c405300d21245439d92c642dd"
+      },
+      "statistics": {
+        "maximum": 4941.0,
+        "mean": 4941.0,
+        "minimum": 4941.0,
+        "n_samples": 1,
+        "one_count": 0,
+        "population_variance": 0.0,
+        "zero_count": 0
+      }
+    },
+    "degree": {
+      "files": {
+        "curves": "results/distributions/power_real__degree__fitted_curves.csv",
+        "frequencies": "results/distributions/power_real__degree__frequencies.csv",
+        "samples": "results/distributions/power_real__degree__samples.csv"
+      },
+      "fit": {
+        "aic": 17049.969543573825,
+        "candidates": [
+          {
+            "aic": 17976.678885146786,
+            "ks": 0.08037861434345883,
+            "log_likelihood": -8987.339442573393,
+            "method": "hurdle_shifted_poisson",
+            "n_fit": 4941,
+            "parameter_count": 1,
+            "parameters": {
+              "mu": 1.6690953248330298,
+              "p0": 0.0
+            }
+          },
+          {
+            "aic": 17049.969543573825,
+            "ks": 0.04557081339277702,
+            "log_likelihood": -8522.984771786912,
+            "method": "hurdle_shifted_nbinom",
+            "n_fit": 4941,
+            "parameter_count": 2,
+            "parameters": {
+              "mu": 1.6690953248330298,
+              "p": 0.5873976576696075,
+              "p0": 0.0,
+              "r": 2.3761927251715362
+            }
+          }
+        ],
+        "fit_scope": "all nodes; zero mass retained",
+        "ks": 0.04557081339277702,
+        "log_likelihood": -8522.984771786912,
+        "method": "hurdle_shifted_nbinom",
+        "n_fit": 4941,
+        "parameter_count": 2,
+        "parameters": {
+          "mu": 1.6690953248330298,
+          "p": 0.5873976576696075,
+          "p0": 0.0,
+          "r": 2.3761927251715362
+        },
+        "reason": "Lowest AIC among screened candidates; descriptive only, not a significance test.",
+        "scope_weight": 1.0,
+        "status": "descriptive_fit"
+      },
+      "graph_edges": 6594,
+      "graph_nodes": 4941,
+      "sha256": {
+        "curves": "4e196ee670e8c30d9db13b6768f9c07ce08ec878c92eff7a1bd7dec66ca61e41",
+        "frequencies": "942f9b2f7493119041b32cfded6dcba07456d82da6ff67a89921ddf885b5f5d2",
+        "samples": "af8e1b5cb5fa6c4e40068ea50510610013c870678f25b6ebc2a8142c9710875b"
+      },
+      "statistics": {
+        "maximum": 19.0,
+        "mean": 2.66909532483303,
+        "minimum": 1.0,
+        "n_samples": 4941,
+        "one_count": 1226,
+        "population_variance": 3.208656315746206,
+        "zero_count": 0
+      }
+    },
+    "eccentricity": {
+      "files": {
+        "curves": "results/distributions/power_real__eccentricity__fitted_curves.csv",
+        "frequencies": "results/distributions/power_real__eccentricity__frequencies.csv",
+        "samples": "results/distributions/power_real__eccentricity__samples.csv"
+      },
+      "fit": {
+        "aic": 26991.758168730088,
+        "candidates": [
+          {
+            "aic": 29850.551465213517,
+            "ks": 0.12254370836803699,
+            "log_likelihood": -14924.275732606759,
+            "method": "bounded_binomial",
+            "n_fit": 4941,
+            "parameter_count": 1,
+            "parameters": {
+              "lower": 23,
+              "p": 0.5017730964511674,
+              "trials": 23
+            }
+          },
+          {
+            "aic": 27008.18166053654,
+            "ks": 0.06142143636882541,
+            "log_likelihood": -13502.09083026827,
+            "method": "bounded_beta_binomial",
+            "n_fit": 4941,
+            "parameter_count": 2,
+            "parameters": {
+              "a": 7.309417673143659,
+              "b": 7.224140273410831,
+              "lower": 23,
+              "trials": 23
+            }
+          },
+          {
+            "aic": 26991.758168730088,
+            "ks": 0.05850755558350773,
+            "log_likelihood": -13493.879084365044,
+            "method": "bounded_discrete_normal",
+            "n_fit": 4941,
+            "parameter_count": 2,
+            "parameters": {
+              "lower": 23,
+              "mu": 34.54108636837566,
+              "sigma": 3.735228634460636,
+              "upper": 46
+            }
+          }
+        ],
+        "fit_scope": "LCC nodes; support fixed to observed radius..diameter",
+        "ks": 0.05850755558350773,
+        "log_likelihood": -13493.879084365044,
+        "method": "bounded_discrete_normal",
+        "n_fit": 4941,
+        "parameter_count": 2,
+        "parameters": {
+          "lower": 23,
+          "mu": 34.54108636837566,
+          "sigma": 3.735228634460636,
+          "upper": 46
+        },
+        "reason": "Lowest AIC among screened candidates; descriptive only, not a significance test.",
+        "scope_weight": 1.0,
+        "status": "descriptive_fit"
+      },
+      "graph_edges": 6594,
+      "graph_nodes": 4941,
+      "sha256": {
+        "curves": "f671f22e280c14a6935587cb7e39bc1a57a51c1f25c1d31268e63a1f96c4aeff",
+        "frequencies": "37a40e1cfbdc6bbf2c8744637e541af9b613ebbeb30749ede4ceb1421d74ea3e",
+        "samples": "e9dfa7ea502015742bd6459edb6393520c6e3652f314bf63bc3109141ce267c8"
+      },
+      "statistics": {
+        "maximum": 46.0,
+        "mean": 34.54078121837685,
+        "minimum": 23.0,
+        "n_samples": 4941,
+        "one_count": 0,
+        "population_variance": 13.827369476724769,
+        "zero_count": 0
+      }
+    }
+  },
+  "network_id": "power_real"
+}

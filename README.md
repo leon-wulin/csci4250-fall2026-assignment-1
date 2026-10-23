@@ -29,11 +29,11 @@ Only on a new machine, after approval to create an environment or install packag
 To invoke project scripts reliably from fresh agent shells:
 
 ```powershell
-conda run -n fons-a1 --no-capture-output python src\analyze.py
-conda run -n fons-a1 --no-capture-output python -m pytest tests -q
+conda run -n fons-a1 --no-capture-output python src/run_task2.py
+conda run -n fons-a1 --no-capture-output python -m pytest tests -q -p no:cacheprovider
 ```
 
-The `src/analyze.py` script and production analysis tests are *future* work; do not invoke the analysis script until implemented. Current tests cover environment guards and tiny reference graphs; they do not validate a completed analysis pipeline. When `conda` is absent from `PATH`, replace `conda` in these examples with `& 'C:\ProgramData\anaconda3\Scripts\conda.exe'`. Never guess another installation path or switch interpreters to bypass a failed check.
+Task 2 is implemented and verified for all six networks. Its entrypoint runs tests before full-network work, saves validated results incrementally, and reuses matching completed caches. Use `python src/run_task2.py --verify-only` through the same Conda convention for a fresh-process cross-check without full BFS. When `conda` is absent from `PATH`, replace `conda` in these examples with `& 'C:\ProgramData\anaconda3\Scripts\conda.exe'`. Never guess another installation path or switch interpreters to bypass a failed check. See `TASK2_REPRODUCIBILITY.md` for configuration, output schemas, timing definitions and cache behavior.
 
 **VS Code:** use *Python: Select Interpreter* to choose `fons-a1`, then open a fresh integrated terminal. IDE interpreter selection does not guarantee that a separate AI agent shell uses the same interpreter; explicitly use `conda run` for AI execution.
 
@@ -71,22 +71,40 @@ Both manually downloaded datasets are present as extracted files under `data/raw
 & 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n fons-a1 --no-capture-output python -m pytest tests -q
 ```
 
-The audit records source checksums, archive integrity, raw record/duplicate counts, loaded graph sizes, loops, connectivity and planned model parameters in `results/tables/dataset_preflight.json`. It does not clean inputs, generate assignment models or compute full-network distances. ca-GrQc contains 12 self-loops: decide and document their treatment before production analysis. See `READINESS_PLAN.md` for verified metadata, proposed seeds, statistical conventions, cache invalidation rules, output paths and remaining implementation work. Gephi is treated as manually operated.
+The audit records source checksums, archive integrity, raw record/duplicate counts, loaded graph sizes, loops, connectivity and historical planned parameters in `results/tables/dataset_preflight.json`. It does not clean inputs, generate assignment models or compute full-network distances. On 2026-10-18, the student approved removing ca-GrQc's 12 self-loops in a derived copy while preserving all 5242 vertices, yielding 14484 analyzed edges. The student also specified seed=42 for all four models, superseding the older readiness-plan seeds. Task 2 writes its fresh audit separately to `results/tables/task2_input_audit.json`; the original baseline remains intact. `READINESS_PLAN.md` records historical readiness work; `task2_config.json`, `TASK2_REPRODUCIBILITY.md` and current Task 2 JSON are authoritative for this computational run. Gephi is treated as manually operated.
 
 ## Version control
 
+For cloning on another Windows computer, Gephi inputs, and the raw-data/cache
+transfer boundary, see [Windows 11 handoff](WINDOWS11_HANDOFF.md).
+
 Public repository: https://github.com/leon-wulin/csci4250-fall2026-assignment-1 . Local branch: `main`; remote: `origin`. The student approved the initial project commit and push on 2026-10-17. Raw archives, extracted data, computational caches and logs are excluded by verified ignore rules. Review each future staged file list before uploading to this public repository.
 
-## Expected project outputs (future)
+## Project outputs
 
-- `src/`: loading/cleaning, ER and BA generation, exact graph metrics, plot generation.
-- `tests/`: hand-verified small graphs + sanity checks.
-- `results/tables/`: CSV/JSON metrics and parameters.
-- `results/plots/`: distribution figures (four metrics times six networks).
-- `results/gephi/`: optional Gephi exports and project files.
-- `report/`: report source and final PDF.
+- `src/`: verified Task 2 import/preprocessing, ER/BA generation, exact metrics/cache validation, and separate Task 3 distribution/fitting/plotting pipeline.
+- `tests/`: synthetic graph, model/GraphML, cache, CSV/JSON, distribution/fitting/export tests (55 passed on 2026-10-22).
+- `data/processed/task2/`: six round-trip-verified GraphML networks, including the four generated models.
+- `results/tables/`: Task 2 global CSV/JSON, model CSV, input audit, preprocessing and verification records.
+- `results/cache/`: six node-level eccentricity CSVs plus degree/component CSVs and per-network completion manifests (ignored by Git).
+- `results/logs/`: Task 2 progress/timing log and unit-test output (ignored by Git).
+- `results/distributions/`: Task 3 samples, empirical frequencies, plotted probabilities and per-network provenance.
+- `results/plots/task3/`: eight three-panel figures, each PNG and vector PDF; all 24 required graph-by-metric panels.
+- `results/gephi/`: optional future exports/projects.
+- `report/`: official LaTeX source and existing draft PDF; not changed during Task 2 computation.
 
-Run instructions for analysis scripts must be **added here once the actual scripts exist**. Do not claim any outputs exist until produced and checked.
+Task 2 and Task 3 computation/export checks are complete. Task 3 report integration, Task 4 and Git commits/pushes require the student's next instruction.
+
+## Task 3 distributions
+
+See `TASK3_REPRODUCIBILITY.md` for scopes, normalization, fits/N/A limitations, artifact paths and verified timings. From the project root:
+
+```powershell
+& 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n fons-a1 --no-capture-output python src/run_task3.py
+& 'C:\ProgramData\anaconda3\Scripts\conda.exe' run -n fons-a1 --no-capture-output python src/run_task3.py --verify-only
+```
+
+The pipeline uses frozen Task 2 GraphMLs and exact saved eccentricities; no model regeneration or expensive distance recomputation. Normal execution rewrites cheap reproducible Task 3 outputs and requires a fresh visual review afterward. Verify-only checks saved samples/frequencies/moments/curves/exports and input identities without refitting or drawing. Main statistics are `results/tables/task3_distribution_statistics.csv` and `.json`; all fitting candidates and reasons are retained in `task3_fit_parameters.csv`. Figures use descriptive fits/references/smoothers, not claims of formal statistical acceptance. Original data and LaTeX sources are untouched.
 
 ## Assistant workflow
 

@@ -1,0 +1,604 @@
+{
+  "created_utc": "2026-10-22T04:15:03.224839+00:00",
+  "implementation_and_documentation": [
+    {
+      "bytes": 60911,
+      "path": "PROJECT_STATUS.md",
+      "sha256": "b4ecaae2593696b6b10bd744b72c0b2a11059d6fed9d298e319ab5432799f875"
+    },
+    {
+      "bytes": 9669,
+      "path": "README.md",
+      "sha256": "906b5a4771155cabf8f022c0001beca35840a6386963f1a441230befc3094058"
+    },
+    {
+      "bytes": 16897,
+      "path": "src/run_task3.py",
+      "sha256": "116e2674254c6044be17bf6c22045395d62daa45e2bb11d007d95d2fcd4a8e92"
+    },
+    {
+      "bytes": 9076,
+      "path": "src/task3_distributions.py",
+      "sha256": "a285ffb81fa241da9a0ca3a29f34f41afe2815c7a65fe694314df0b02021d3df"
+    },
+    {
+      "bytes": 16486,
+      "path": "src/task3_fitting.py",
+      "sha256": "1c08420cab5e3c3e57b6db03464d9c887c5f91319822c4b71a19cfadab8b7caa"
+    },
+    {
+      "bytes": 9625,
+      "path": "src/task3_plotting.py",
+      "sha256": "e7a4ee8f9e7eea1018a16e1d7294e99179b29a75356ac0ec0fda70a644b35321"
+    },
+    {
+      "bytes": 694,
+      "path": "task3_config.json",
+      "sha256": "9b99cb3a95bb1976fd39a1ad28f7b70f21de84317f7b8fb6608cd404b048e901"
+    },
+    {
+      "bytes": 10424,
+      "path": "TASK3_REPRODUCIBILITY.md",
+      "sha256": "54ee49689a89af9a45f81d4b175da9dab9bcba26132f1bd0370fbe0ccfef18d6"
+    },
+    {
+      "bytes": 7250,
+      "path": "tests/test_task3.py",
+      "sha256": "f4e6167de7f3d90e66442418ec86ea76cc9e7ccd99bf15048cb1370c4432b374"
+    }
+  ],
+  "note": "Handoff hashes are a snapshot. A later verify-only run appends the log/updates test output, so refresh those inventory entries after intentional reruns. No original Task 2 inventory was rewritten.",
+  "outputs": [
+    {
+      "bytes": 1651,
+      "path": "results/distributions/grqc_ba__clustering__fitted_curves.csv",
+      "sha256": "afd97d1320f7a0981593a9e5f27ec266ab1eb8b625c720279fd82372508ae7a9"
+    },
+    {
+      "bytes": 5448,
+      "path": "results/distributions/grqc_ba__clustering__frequencies.csv",
+      "sha256": "6acaf4dc4c38de7ef5a696db6b7df8f71c59f3984fca1e1a145d7453e9d19405"
+    },
+    {
+      "bytes": 1279,
+      "path": "results/distributions/grqc_ba__clustering__plot_bins.csv",
+      "sha256": "769c90036fecacea3502f97f5ec3fadd2cd81be11514a10184b31790703e5df7"
+    },
+    {
+      "bytes": 159048,
+      "path": "results/distributions/grqc_ba__clustering__samples.csv",
+      "sha256": "8ff0957b3052ee78e8b48e25d9228103b8f6426e9b1497a503353d69369159be"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/grqc_ba__component_size__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 72306,
+      "path": "results/distributions/grqc_ba__component_size__frequencies.csv",
+      "sha256": "864c51e1e9c300e0a89b7344b70665cb04fcb66cbf2a059f43bf436de0904488"
+    },
+    {
+      "bytes": 71,
+      "path": "results/distributions/grqc_ba__component_size__samples.csv",
+      "sha256": "62230fb418356a9bc296fbdcd7e7e4356f4497e3309ab2809b47f667a3e98406"
+    },
+    {
+      "bytes": 18807,
+      "path": "results/distributions/grqc_ba__degree__fitted_curves.csv",
+      "sha256": "56f93a0f022c60034e267e2a87f2d881dc5086e237a013354d9993b753caec6d"
+    },
+    {
+      "bytes": 4591,
+      "path": "results/distributions/grqc_ba__degree__frequencies.csv",
+      "sha256": "03f68bc0c0d5c744a85676043693c46066e59e9c02b3ad8ea99422423d13cf2a"
+    },
+    {
+      "bytes": 120081,
+      "path": "results/distributions/grqc_ba__degree__samples.csv",
+      "sha256": "75e612c3f2d86dced17e4bd97b513a685c1fc24639a9073cc48a1ce3c89dcbbc"
+    },
+    {
+      "bytes": 518,
+      "path": "results/distributions/grqc_ba__eccentricity__fitted_curves.csv",
+      "sha256": "76441cf795837485982cf79d6444727f2aea58d9365b2a7222c3390ae92a412f"
+    },
+    {
+      "bytes": 184,
+      "path": "results/distributions/grqc_ba__eccentricity__frequencies.csv",
+      "sha256": "89fb3e544ca504d2e7d140f9bc6a14a7b35013ea7e1c01b6c8c22b4f561901b1"
+    },
+    {
+      "bytes": 150948,
+      "path": "results/distributions/grqc_ba__eccentricity__samples.csv",
+      "sha256": "b6c7a2831916bc29b8388e16647113235ae84185e6324f9067f71f25e71c79bf"
+    },
+    {
+      "bytes": 17870,
+      "path": "results/distributions/grqc_ba__metadata.json",
+      "sha256": "9d0fe0a1747c7df5e98d877ac12fe247438184468fb5092529586c1dcd87ce8b"
+    },
+    {
+      "bytes": 1531,
+      "path": "results/distributions/grqc_er__clustering__fitted_curves.csv",
+      "sha256": "7655f04dd21c1b5140418c75e6975d7a4b4d76a29cb34821017f2fb09355ed17"
+    },
+    {
+      "bytes": 493,
+      "path": "results/distributions/grqc_er__clustering__frequencies.csv",
+      "sha256": "61c183d60fbaf886d7c64e7420ecb4cc25740f87601619a3e4faa646bb9fb7c4"
+    },
+    {
+      "bytes": 1223,
+      "path": "results/distributions/grqc_er__clustering__plot_bins.csv",
+      "sha256": "9400ff1247f105168e1770a6e9270ad3d429629bf39f81260c974c3c81d04422"
+    },
+    {
+      "bytes": 152047,
+      "path": "results/distributions/grqc_er__clustering__samples.csv",
+      "sha256": "de0cd76a6c531e8669988f59866e303de6a3dde3fa7daf9d099321e7bc312435"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/grqc_er__component_size__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 72088,
+      "path": "results/distributions/grqc_er__component_size__frequencies.csv",
+      "sha256": "81d38e3c7f1b324c29383f903ae0866dea1221e1c72bf26fbd1b6d8650abf330"
+    },
+    {
+      "bytes": 584,
+      "path": "results/distributions/grqc_er__component_size__samples.csv",
+      "sha256": "793499d07cae410660ab3f366ca42cbd516f891998a0f602f117521591d15b9e"
+    },
+    {
+      "bytes": 1063,
+      "path": "results/distributions/grqc_er__degree__fitted_curves.csv",
+      "sha256": "cf672eedd53d3b61de59318672f79189df3a1edde7825c5d77c5bce3ec89bb6a"
+    },
+    {
+      "bytes": 497,
+      "path": "results/distributions/grqc_er__degree__frequencies.csv",
+      "sha256": "c41cb5fa999e63936baf792faf1d8ceaa8d3bff583074f1f54783afe704b2f73"
+    },
+    {
+      "bytes": 119744,
+      "path": "results/distributions/grqc_er__degree__samples.csv",
+      "sha256": "3b547d7eb3ae8b156bae3a31e004230db866c72c7c0d9eafd01db63c771a1db3"
+    },
+    {
+      "bytes": 678,
+      "path": "results/distributions/grqc_er__eccentricity__fitted_curves.csv",
+      "sha256": "27061fc00b271e9427df615d776b5e61c8edc691543e63b2a8aeac9e63246384"
+    },
+    {
+      "bytes": 219,
+      "path": "results/distributions/grqc_er__eccentricity__frequencies.csv",
+      "sha256": "975cf6eefb623c63036766b2659209ad53022391a17fad2eecb7b5c9eda138cc"
+    },
+    {
+      "bytes": 150419,
+      "path": "results/distributions/grqc_er__eccentricity__samples.csv",
+      "sha256": "1ab9456278daf056aef6fa3e1db30e6f2ae0dd83042d4e22807025c8a80f4343"
+    },
+    {
+      "bytes": 17155,
+      "path": "results/distributions/grqc_er__metadata.json",
+      "sha256": "733a74675703ffcb47111fcc27b1b5f977a6c0d481d7856272dc5ec2a6151bec"
+    },
+    {
+      "bytes": 1626,
+      "path": "results/distributions/grqc_real__clustering__fitted_curves.csv",
+      "sha256": "962c68a0be1bd730c14e7078e6f80aa3291863e24de028d85e052a43776fb7e5"
+    },
+    {
+      "bytes": 16462,
+      "path": "results/distributions/grqc_real__clustering__frequencies.csv",
+      "sha256": "88e6cc33910302287ceed5a8ab05f9d99f4e02f5af7c5f637ac5fc007fedde6f"
+    },
+    {
+      "bytes": 1517,
+      "path": "results/distributions/grqc_real__clustering__plot_bins.csv",
+      "sha256": "a07dea72e7f805c2b744f78a2d651180c0b7dc3b19871f336c07072301b8b37d"
+    },
+    {
+      "bytes": 186562,
+      "path": "results/distributions/grqc_real__clustering__samples.csv",
+      "sha256": "f458d9e01fa00044cbe91b72b125fa51a8e1ab2dda1e0006004b5c57133c20cd"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/grqc_real__component_size__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 57357,
+      "path": "results/distributions/grqc_real__component_size__frequencies.csv",
+      "sha256": "55a39716c156637540392f2efd0dd0717b59ca01866bf3270db47f8573ff9273"
+    },
+    {
+      "bytes": 11296,
+      "path": "results/distributions/grqc_real__component_size__samples.csv",
+      "sha256": "7c46ba067009db44fc9399c29aac43c1fe4c39c4599e5f2ee44834af24066768"
+    },
+    {
+      "bytes": 5669,
+      "path": "results/distributions/grqc_real__degree__fitted_curves.csv",
+      "sha256": "432f7abdfc3122cb78b8dd92b6a40ed94a5f51d15b6563696dea9664f63ec3c4"
+    },
+    {
+      "bytes": 2216,
+      "path": "results/distributions/grqc_real__degree__frequencies.csv",
+      "sha256": "3e946dd3814b17f89322eed239518fcc31b2d7ccc13faaf2ce2bede0f347f32f"
+    },
+    {
+      "bytes": 134832,
+      "path": "results/distributions/grqc_real__degree__samples.csv",
+      "sha256": "75c8311e4f4116c79b337a01c1516ca731490ce40619cc26eda7e1c30146beed"
+    },
+    {
+      "bytes": 1135,
+      "path": "results/distributions/grqc_real__eccentricity__fitted_curves.csv",
+      "sha256": "40840bad1edd16acdb5f712600bdc6013122841655afae843638a60f412fd422"
+    },
+    {
+      "bytes": 391,
+      "path": "results/distributions/grqc_real__eccentricity__frequencies.csv",
+      "sha256": "2cc8e283d45b3da529c490d12f4e165516460ccffc5bb33561e0229d25c59122"
+    },
+    {
+      "bytes": 135484,
+      "path": "results/distributions/grqc_real__eccentricity__samples.csv",
+      "sha256": "e8d8ba99751a30fe16a83fa745734be63cc3999c83a3dc55db8984c84db9b8f4"
+    },
+    {
+      "bytes": 18656,
+      "path": "results/distributions/grqc_real__metadata.json",
+      "sha256": "921b611b87ed3535aeee01f3ae58d8465986e3d517c965fe38832271765cd0ba"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/power_ba__clustering__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/power_ba__clustering__frequencies.csv",
+      "sha256": "983ec7df49db7982b2727076652740fdad77be3a10fc711ff39078930e6f01fb"
+    },
+    {
+      "bytes": 1117,
+      "path": "results/distributions/power_ba__clustering__plot_bins.csv",
+      "sha256": "3d8e93d3d04dc21f5d97d34d499b6e1f272ee9cb5aa4b72f5b1ead5eac8367dd"
+    },
+    {
+      "bytes": 147160,
+      "path": "results/distributions/power_ba__clustering__samples.csv",
+      "sha256": "0afb7cc3f62ab85130eae036efeebfadabbb402c2ff1c81777d5d2514e5089e1"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/power_ba__component_size__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 68092,
+      "path": "results/distributions/power_ba__component_size__frequencies.csv",
+      "sha256": "7d0eea9b780303a6499a4861fd63ad875d48b91a25197128624b23935c8b58ef"
+    },
+    {
+      "bytes": 72,
+      "path": "results/distributions/power_ba__component_size__samples.csv",
+      "sha256": "9ce167e17e40c71b6a5e181b8ea50e11a4dde130d7f5c6cebd3468ab0bb6c9de"
+    },
+    {
+      "bytes": 14551,
+      "path": "results/distributions/power_ba__degree__fitted_curves.csv",
+      "sha256": "d6e07cc9d724d0b9407122c9a615daeefff027e9fedeee58c4cae082bf9f5e91"
+    },
+    {
+      "bytes": 3250,
+      "path": "results/distributions/power_ba__degree__frequencies.csv",
+      "sha256": "538497c52aad78e878dc574df51cebd60808a54cdd81633dce3fa6e660bac4ae"
+    },
+    {
+      "bytes": 117606,
+      "path": "results/distributions/power_ba__degree__samples.csv",
+      "sha256": "3b62691aa5ada8647a9511cf157100b9bd30051679c3cf8f87c24a4573064ea5"
+    },
+    {
+      "bytes": 1276,
+      "path": "results/distributions/power_ba__eccentricity__fitted_curves.csv",
+      "sha256": "609322f3cbdde5bfb9622e6505badeacc0df5a68a9d3c80ce3e6e68bd7dd5e9f"
+    },
+    {
+      "bytes": 467,
+      "path": "results/distributions/power_ba__eccentricity__frequencies.csv",
+      "sha256": "7256e2cf95833c406c37160f714f2830473b633a805512b5bde4db20d107a8aa"
+    },
+    {
+      "bytes": 152101,
+      "path": "results/distributions/power_ba__eccentricity__samples.csv",
+      "sha256": "bc0a2838cf917d4cfd2bf8627ae0eb2c07b7289330c9c582f26edac99ca78f03"
+    },
+    {
+      "bytes": 16418,
+      "path": "results/distributions/power_ba__metadata.json",
+      "sha256": "382372ebe73834eeacc63a39151de6568f4d86d8e4ff54048fc3572296c03ae8"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/power_er__clustering__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 296,
+      "path": "results/distributions/power_er__clustering__frequencies.csv",
+      "sha256": "9c2700eb473e6e156a8948e80ffcbf47c81cea143007434d175ee0e154b132f3"
+    },
+    {
+      "bytes": 1244,
+      "path": "results/distributions/power_er__clustering__plot_bins.csv",
+      "sha256": "50c86f53c88fe896ba72606595ddc0e8cc783d9100059ea410f9f462aca07d27"
+    },
+    {
+      "bytes": 147254,
+      "path": "results/distributions/power_er__clustering__samples.csv",
+      "sha256": "27a86516b433f81539b5a057a33589d8570dff6f58d0bba2d30480f99309b9f8"
+    },
+    {
+      "bytes": 238128,
+      "path": "results/distributions/power_er__component_size__fitted_curves.csv",
+      "sha256": "1d085d0deebdf0d3a1b4b1449e7114d3be331c59766bb2eddec7b95dad331287"
+    },
+    {
+      "bytes": 62076,
+      "path": "results/distributions/power_er__component_size__frequencies.csv",
+      "sha256": "9a6bb87f154f5fa33b9acbd5366706d5c0c2b027dcf2365c2745171053278d69"
+    },
+    {
+      "bytes": 11930,
+      "path": "results/distributions/power_er__component_size__samples.csv",
+      "sha256": "4a4025ff74c328af56b4f666e2d1a5fa920727eb988e8e6b60c97222415d2d4d"
+    },
+    {
+      "bytes": 801,
+      "path": "results/distributions/power_er__degree__fitted_curves.csv",
+      "sha256": "f3918a85d42f512eec5ea31fbf018cd908a65641893617238d6660c0b9323528"
+    },
+    {
+      "bytes": 378,
+      "path": "results/distributions/power_er__degree__frequencies.csv",
+      "sha256": "0b2f5f36eaa187b78ed298c62eb3835980e5e8447e45f4c240011afc22a5752d"
+    },
+    {
+      "bytes": 117516,
+      "path": "results/distributions/power_er__degree__samples.csv",
+      "sha256": "251d85c126e7db5f0e429e7b979eaba97caca8f53a9c877674732557524bc9f7"
+    },
+    {
+      "bytes": 1291,
+      "path": "results/distributions/power_er__eccentricity__fitted_curves.csv",
+      "sha256": "01aa2bb6c7faeb51fab6994a1bb2c203068de24b767019cce00519d86343b4bc"
+    },
+    {
+      "bytes": 430,
+      "path": "results/distributions/power_er__eccentricity__frequencies.csv",
+      "sha256": "9fbe1ac7729fdb8e40dcde5bb29e74af51affb4cfc3f507b4f39d09697fa1b76"
+    },
+    {
+      "bytes": 138660,
+      "path": "results/distributions/power_er__eccentricity__samples.csv",
+      "sha256": "66455d5c0952820dcc1275ea58fcef22e6cdca319b6995ef7b96b849740ba220"
+    },
+    {
+      "bytes": 16986,
+      "path": "results/distributions/power_er__metadata.json",
+      "sha256": "0866235ca275efa4ba1e26ac2bf36f5695ce91e76a8fc84c69f366fa32dbbbfc"
+    },
+    {
+      "bytes": 1639,
+      "path": "results/distributions/power_real__clustering__fitted_curves.csv",
+      "sha256": "b9edcb974aef7532c670230df9b6755dd47efad0aab512a3161b75ddb2c60285"
+    },
+    {
+      "bytes": 2934,
+      "path": "results/distributions/power_real__clustering__frequencies.csv",
+      "sha256": "5931b3102c779f2916963a35cf90f500826ba6cdd2b53db0032b110f9509aedc"
+    },
+    {
+      "bytes": 1442,
+      "path": "results/distributions/power_real__clustering__plot_bins.csv",
+      "sha256": "62bae5480aa69d56a546415c2ed0021abf33e0004d6c094a06c48d56f9a23bee"
+    },
+    {
+      "bytes": 165861,
+      "path": "results/distributions/power_real__clustering__samples.csv",
+      "sha256": "f0196855e80acc42629454cc17a214a828e53679aca1096a81acacc3315b435f"
+    },
+    {
+      "bytes": 39,
+      "path": "results/distributions/power_real__component_size__fitted_curves.csv",
+      "sha256": "b66b0bc273737167565af53798fb6462e581e5541643a94d2eafdc13fe496772"
+    },
+    {
+      "bytes": 68092,
+      "path": "results/distributions/power_real__component_size__frequencies.csv",
+      "sha256": "7d0eea9b780303a6499a4861fd63ad875d48b91a25197128624b23935c8b58ef"
+    },
+    {
+      "bytes": 74,
+      "path": "results/distributions/power_real__component_size__samples.csv",
+      "sha256": "0a9ccad594da97ae768e67409327b0b5c21ab74c405300d21245439d92c642dd"
+    },
+    {
+      "bytes": 1380,
+      "path": "results/distributions/power_real__degree__fitted_curves.csv",
+      "sha256": "4e196ee670e8c30d9db13b6768f9c07ce08ec878c92eff7a1bd7dec66ca61e41"
+    },
+    {
+      "bytes": 548,
+      "path": "results/distributions/power_real__degree__frequencies.csv",
+      "sha256": "942f9b2f7493119041b32cfded6dcba07456d82da6ff67a89921ddf885b5f5d2"
+    },
+    {
+      "bytes": 127448,
+      "path": "results/distributions/power_real__degree__samples.csv",
+      "sha256": "af8e1b5cb5fa6c4e40068ea50510610013c870678f25b6ebc2a8142c9710875b"
+    },
+    {
+      "bytes": 2916,
+      "path": "results/distributions/power_real__eccentricity__fitted_curves.csv",
+      "sha256": "f671f22e280c14a6935587cb7e39bc1a57a51c1f25c1d31268e63a1f96c4aeff"
+    },
+    {
+      "bytes": 1017,
+      "path": "results/distributions/power_real__eccentricity__frequencies.csv",
+      "sha256": "37a40e1cfbdc6bbf2c8744637e541af9b613ebbeb30749ede4ceb1421d74ea3e"
+    },
+    {
+      "bytes": 161983,
+      "path": "results/distributions/power_real__eccentricity__samples.csv",
+      "sha256": "e9dfa7ea502015742bd6459edb6393520c6e3652f314bf63bc3109141ce267c8"
+    },
+    {
+      "bytes": 17720,
+      "path": "results/distributions/power_real__metadata.json",
+      "sha256": "dadfd15c1366ac1014e83e4ce3e4f123837bb96c4c210de2bbb5d121731c4b93"
+    },
+    {
+      "bytes": 12987,
+      "path": "results/logs/task3_execution.log",
+      "sha256": "d19173f7f96365cfdcb1562409bbce29dc6b5427ef590197a882ad5596f2e042"
+    },
+    {
+      "bytes": 99,
+      "path": "results/logs/task3_tests.txt",
+      "sha256": "54f8c85f4c5db68ca772f49b68a85dd0321d10dc21e81c4e95b7400b5bc7f439"
+    },
+    {
+      "bytes": 36879,
+      "path": "results/plots/task3/grqc__clustering.pdf",
+      "sha256": "0b43d3e2c0b43ba3392d97099e7424f760f63c6b555c77868e8f130107c028df"
+    },
+    {
+      "bytes": 225255,
+      "path": "results/plots/task3/grqc__clustering.png",
+      "sha256": "465d4395354f8766517c62905eb181ec03aaaab384356619e0ef8b86e3330c97"
+    },
+    {
+      "bytes": 34008,
+      "path": "results/plots/task3/grqc__component_size.pdf",
+      "sha256": "8f5672145dd2c332868d1a1eb907d5079565ddaef07368cc8e4d53ad2f11c6f7"
+    },
+    {
+      "bytes": 190251,
+      "path": "results/plots/task3/grqc__component_size.png",
+      "sha256": "279f9123072c8ef4a4eb3a7f2b475690da5a44e1d5a11ac86c7ccfa6a789c4c5"
+    },
+    {
+      "bytes": 34540,
+      "path": "results/plots/task3/grqc__degree.pdf",
+      "sha256": "e73bee0b1b521b0d69b856e200046d1c9308a3db353b206672986e6aaba686f1"
+    },
+    {
+      "bytes": 224005,
+      "path": "results/plots/task3/grqc__degree.png",
+      "sha256": "8909fc5ca94fa9eb25919574188c96aa3ad799002ce3eab8092b1ccd3d5e5805"
+    },
+    {
+      "bytes": 31549,
+      "path": "results/plots/task3/grqc__eccentricity.pdf",
+      "sha256": "8130d6656f998226465ccbab475aacfc289d338ec5dce342f005b246c5bcd420"
+    },
+    {
+      "bytes": 195532,
+      "path": "results/plots/task3/grqc__eccentricity.png",
+      "sha256": "c75eee1364f018410204e2bd0d11644f0eb4457f8255fec19d47b9977e7e9799"
+    },
+    {
+      "bytes": 37240,
+      "path": "results/plots/task3/power__clustering.pdf",
+      "sha256": "b26976a53b1893932ad2544a3245e24b03a454ca2e8f6120da40a0b51dd7ab58"
+    },
+    {
+      "bytes": 202570,
+      "path": "results/plots/task3/power__clustering.png",
+      "sha256": "756589e01bec6b730a93c62ecf6832c9405d8d62440bc1c2b90f1c18a3e10238"
+    },
+    {
+      "bytes": 34808,
+      "path": "results/plots/task3/power__component_size.pdf",
+      "sha256": "4ca3910fd155832c3abae7ef4a9bea622fc913e5cb25ae297258d2696d9daaf2"
+    },
+    {
+      "bytes": 192913,
+      "path": "results/plots/task3/power__component_size.png",
+      "sha256": "8d2801dd85bbe495c8317fb03b461f776d1882c097706457bf1d854bd2ded375"
+    },
+    {
+      "bytes": 33636,
+      "path": "results/plots/task3/power__degree.pdf",
+      "sha256": "cb540c199d55dec2ebc44ef87f810726c5b466857d59a86fc1b5f175a7956503"
+    },
+    {
+      "bytes": 203964,
+      "path": "results/plots/task3/power__degree.png",
+      "sha256": "862819228327606a2661701097b47b6ebabd85b816e4808989d1e74e2eb50f81"
+    },
+    {
+      "bytes": 32972,
+      "path": "results/plots/task3/power__eccentricity.pdf",
+      "sha256": "ae6a4aa04e5f726df399618be7207f4b9f35e6a24d0011424f9d9d1a76d91108"
+    },
+    {
+      "bytes": 208416,
+      "path": "results/plots/task3/power__eccentricity.png",
+      "sha256": "7a4c0d3428d2fe496c269f65ab6933e983ba34ba9eaa8d7f2ad5a51d20bc7800"
+    },
+    {
+      "bytes": 2279,
+      "path": "results/tables/task3_distribution_statistics.csv",
+      "sha256": "661412aa3877d78cdb25d2b51fe1b728d4744d3a68cd3759f30f5832cccbfb58"
+    },
+    {
+      "bytes": 47846,
+      "path": "results/tables/task3_distribution_statistics.json",
+      "sha256": "0e94736df66bac45d47927b20822f5844504ca7e6a2ca826bbec1871abf6104e"
+    },
+    {
+      "bytes": 3890,
+      "path": "results/tables/task3_figure_manifest.json",
+      "sha256": "cac1d062af09b92a4426c92133a2da5898d024b00b89918f71ad5fb0fe53c794"
+    },
+    {
+      "bytes": 18664,
+      "path": "results/tables/task3_fit_parameters.csv",
+      "sha256": "85ba0596185338623cbc1895c0981108de822b8435fbd718aae3af4ebb60b31a"
+    },
+    {
+      "bytes": 8338,
+      "path": "results/tables/task3_input_manifest.json",
+      "sha256": "ed4ad116c7ad0ae6ed358961470d58bd40543647f895dd4afb273fdf581828df"
+    },
+    {
+      "bytes": 947,
+      "path": "results/tables/task3_verification.json",
+      "sha256": "9f77c828457d67432438901aa1c0fbc9dd81313ac85d16c83946e6e72b0e728d"
+    },
+    {
+      "bytes": 4855,
+      "path": "results/tables/task3_visual_review.json",
+      "sha256": "4bd13252a0d28b3410f32a953b6d8beb53fecf401ead774b639c43f0bd0797ef"
+    }
+  ],
+  "protected_input_count": 62,
+  "protected_inputs_unchanged": true,
+  "report_unchanged": true,
+  "schema": "task3-handoff-v1",
+  "status": "PASS",
+  "visual_review": "results/tables/task3_visual_review.json"
+}

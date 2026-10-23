@@ -1,0 +1,9 @@
+model,value,probability,selected,kind
+bounded_discrete_normal,0.0,0.0,True,integer_value
+bounded_discrete_normal,1.0,0.0,True,integer_value
+bounded_discrete_normal,2.0,0.0,True,integer_value
+bounded_discrete_normal,3.0,0.0,True,integer_value
+bounded_discrete_normal,4.0,0.000272723119240622,True,integer_value
+bounded_discrete_normal,5.0,0.3208122233064811,True,integer_value
+bounded_discrete_normal,6.0,0.673180172134795,True,integer_value
+bounded_discrete_normal,7.0,0.005734881439483308,True,integer_value

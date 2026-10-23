@@ -148,3 +148,15 @@ Assignment_1/
 - Check that graph statistics come from the intended dataset.
 - Record tool versions and visualization settings.
 - Update PROJECT_STATUS.md after verified work.
+
+## Report authoring rules (append to existing AGENTS.md)
+
+- The authoritative editable report source is `report/main.tex` and `report/sections/*.tex`.
+- Edit only the relevant report section for each assignment task.
+- Do not generate a new Word document or rewrite the entire report unless the user requests it.
+- Use verified statistics from saved results; never invent or round away meaningful discrepancies.
+- Compile via `report/build_report.ps1` using a local LaTeX distribution (not Conda).
+- Use PNG for quick review and PDF vector figures inside LaTeX; preserve SVG exports when available.
+- The output `report/report.pdf` is a draft until the user approves submission.
+- Cite dataset provenance and methodological sources; match the professor's Task 1–5 requirements.
+- After meaningful report edits, verify the PDF and update `PROJECT_STATUS.md`.

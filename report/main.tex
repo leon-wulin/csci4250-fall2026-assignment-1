@@ -1,0 +1,44 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Network Science Assignment 1 — editable report template.
+% Compile from this directory using: pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build main.tex
+% Repeat once for references and table of contents, or run build_report.ps1.
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\graphicspath{{../results/plots/}{../results/gephi/}}
+
+% Delete a \pending{...} line when the corresponding content is written.
+\newcommand{\pending}[1]{\par\smallskip\begingroup\color{gray}\itshape\sloppy\noindent[To complete: #1]\par\endgroup\smallskip}
+\newcommand{\missing}{\textemdash}
+
+\title{\bfseries Assignment 1: Network Analysis and Visualization\\
+  \large Frontiers of Network Science (CSCI 4250)}
+\author{Student: [Your Name]\\Fall 2026}
+\date{Due: October 23, 2026}
+
+\begin{document}
+\maketitle
+\noindent\textbf{Submission:} PDF report plus reproducible code/supporting files via Submitty.\\
+\noindent\textbf{Draft status:} This draft includes verified results and unfinished sections.
+\tableofcontents
+\clearpage
+
+\input{sections/01_real_networks}
+\input{sections/02_model_generation}
+\input{sections/03_global_properties}
+\input{sections/04_distributions}
+\input{sections/05_comparison}
+\input{sections/06_methodology}
+\input{sections/07_visualization_optional}
+\input{sections/references}
+
+\end{document}
