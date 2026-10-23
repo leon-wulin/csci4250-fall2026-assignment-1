@@ -1,6 +1,6 @@
 # Main-host handoff: optional figures
 
-Both network figures are integrated into `report/sections/07_visualization_optional.tex`. Main report PDF has NOT been rebuilt on the visualization host; the existing `report/report.pdf` is stale with respect to these figures.
+Main-host update (2026-10-23): both figures have now been compiled into the complete `report/report.pdf` review draft. The PDF has 16 pages: optional methods on page 13, ca-GrQc Figure 9 on page 14, Power Grid Figure 10 on page 15, and references on page 16. Its SHA-256 is `0affd3e72b14b524e3467e47f0d166b8e97fe93d6caeecf3cec3b7a58ccb7038`. All pages were rendered and checked; 26 Gephi file hashes and 55 tests passed. Student/advisor revisions, including the student-name placeholder, remain pending. The notes below describe the original visualization-host handoff and remain useful when rebuilding after revisions.
 
 1. Pull this commit on the main computer after preserving any local changes. Do not overwrite newer analytical/report work.
 2. Review `power_grid_final.pdf` and `grqc_final.pdf`, including captions, numeric IDs, degree legends and community keys. Independent PNG previews are provided. Both figures retain complete analyzed topology.

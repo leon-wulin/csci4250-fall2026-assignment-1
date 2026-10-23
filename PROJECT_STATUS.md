@@ -1,5 +1,14 @@
 # Project Status — Network Science Assignment 1
 
+### 2026-10-23 — Main-host whole-report build and authorized cloud synchronization
+- Student explicitly requested checking the completed cloud-host Gephi figures, rebuilding the complete review-draft PDF, and pushing it back so local and remote match before advisor revisions. Local main was clean at 7ef3180; fetched and fast-forwarded to remote 94eb831 without conflicts. Used only a process-scoped safe.directory; Git metadata writes required approved elevated execution, with no global ownership/configuration change.
+- Re-read course PDF/selection DOCX, project rules, Gephi handoff/methods, both final images and optional report source. Verified all 26 Gephi manifest entries (inputs, scripts, final figures and section source) against their SHA-256 values. Two full-network vector figures retain their recorded analyzed sizes, encodings, legends and sparse numeric IDs. No Gephi layout or analytical result was recomputed.
+- Rebuilt with report/build_report.ps1 using the existing local compiler. Set output PDF version 1.7 to match the included vector figures; added a page break before references so figure pages do not interrupt the bibliography. Updated the title-page status to a review draft pending final revisions and approval; retained the student-name placeholder for the student's/advisor's final edit. No Task 1-5 prose, numerical table, original figure or optional-section source was changed.
+- Final report/report.pdf: 16 Letter pages, 3669157 bytes, SHA-256 0affd3e72b14b524e3467e47f0d166b8e97fe93d6caeecf3cec3b7a58ccb7038. Optional methods page 13, ca-GrQc Figure 9 page 14, Power Grid Figure 10 page 15, complete bibliography page 16. All pages rendered and reviewed; final pages 2-12 also match the earlier reviewed draft pixel-for-pixel. No overfull/underfull text, undefined references or PDF inclusion-version warnings. Existing epstopdf warning remains nonblocking. Poppler reports missing display-font fallbacks for Symbol/ArialUnicode while rendering included vector PDFs, but the inspected pages show the intended labels/legends without missing visible glyphs.
+- Startup preflight passed; 55 tests passed in 2.04 s with a project-local temporary directory. These are validation tests, not a new production analysis. Report PDF is tracked for upload. Backed up the previous PDF under ignored report/build/report.before-cloud-figures-20261023.pdf.
+- Rubric review: Tasks 1/2 contain original/processed sizes and six-network statistics; Task 3 retains 24 panels and 36 required moments with transparent fit/reference/KDE/N/A distinctions; Task 4 compares both real/ER/BA sets; Task 5 documents actual tools, cleaning and workflow; optional figures include scope, layout, encodings and legends. This is a review draft, not certification of full marks. Remaining student/advisor checks include name, small printed Task 3 panel text, fitting-policy acceptance, supplement packaging and final Submitty approval. Gate G remains open; no submission performed.
+- Push scope: rebuilt report/report.pdf, report/main.tex, this progress record and refreshed main-host handoff. Exact pushed commit and remote/local synchronization are verified after committing and reported to the student; no force push is used.
+
 ### 2026-10-23 - GitHub synchronization and main-host handoff
 - Student explicitly authorized pushing all project deliverables and continuing remaining work on the main computer. Fetched origin/main successfully after normal sandbox attempt was denied access to .git/FETCH_HEAD; approved escalation succeeded.
 - Remote base 7ef31801a4d5fbf7281a275943f9e932eca48174. Compared every existing remote file with local snapshot: only PROJECT_STATUS.md and optional visualization LaTeX section differed; no missing remote files or analysis/report-content conflicts. Attached local main/index to verified remote base without checkout or working-file replacement.
@@ -75,9 +84,9 @@
 - Earlier GUI retest opened Gephi's file chooser but path entry/capture became unreliable; student stopped Computer Use with physical Escape before import. No graph import, layout, labels or vector export has been verified. Startup preflight was blocked by script-signature policy; no policy change was made. This host remains visualization-only.
 - Next: student manually opens either GML; confirm Gephi counts, maximize window, then test layout and selective labels. Gate F remains incomplete.
 
-Last updated: 2026-10-22 (Task 5 methodology/reproduction draft integrated and reviewed; validated manifest-refresh helper added; final review pending)
+Last updated: 2026-10-23 (complete 16-page review PDF rebuilt with both Gephi figures; advisor/student revisions pending)
 Deadline: 2026-10-23 11:59 PM (course-local time; confirm Submitty deadline)
-Current stage: **Tasks 1-5 report drafts integrated and assistant-reviewed; student review, optional-task decision and final packaging remain pending**
+Current stage: **Tasks 1-5 and optional figures integrated into the reviewed PDF; advisor/student revisions and final packaging remain pending**
 
 Read the Task 2 verification section below for current results. Earlier dated readiness/session entries are historical; their proposed seeds and pending loop policy are superseded by the student's 2026-10-18 instructions and approval.
 
@@ -90,7 +99,7 @@ Confirmed project root: `H:\work_space\Frontiers_of_Network_Science\Assignment_1
 - [x] Gate C — Task 2 statistics computed, tested and saved for all six graphs; student review pending
 - [x] Gate D — Task 3 four distributions per graph, means/variances, appropriate fits/N/A and 24 verified panels; student review pending
 - [x] Gate E — Tasks 1, 4, and 5 drafted with verified evidence; student review pending
-- [ ] Gate F — optional: two high-quality Gephi vector visualizations
+- [x] Gate F — both full-network vector figures integrated and checked in the complete report; student/advisor review pending
 - [ ] Gate G — report/source/reproduction audit and student approval
 
 ## Tasks by rubric
@@ -102,7 +111,7 @@ Confirmed project root: `H:\work_space\Frontiers_of_Network_Science\Assignment_1
 | Task 3 — Distributions | 15 | Computation/export checks PASS; authorized report draft integrated and visually reviewed; student review pending | `report/sections/04_distributions.tex`, Table 5, Figures 1-8; 24 distributions and 55 prior passing tests |
 | Task 4 — Interpretation | 9 | Evidence-based draft integrated and visually reviewed; student review pending | `report/sections/05_comparison.tex`, report page 10 |
 | Task 5 — Reproducibility | 6 | Methodology and reproduction draft integrated; final supplement/end-to-end packaging review pending | `report/sections/06_methodology.tex`, reproduction guides, `scripts/refresh_task2_manifest.py`, configs and source/input hashes |
-| Optional — Visualization | +10 | NOT STARTED | — |
+| Optional — Visualization | +10 | Both vector figures integrated and reviewed; student/advisor approval pending | Figures 9/10, pages 14/15; methods page 13; results/gephi/ |
 
 ## Data/model parameter registry
 
