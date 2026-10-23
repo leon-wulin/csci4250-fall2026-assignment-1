@@ -1,20 +1,21 @@
 \section{Task 1: Real-World Network Description}
+\subsection{Real-World Networks}
 
-\subsection{General Relativity and Quantum Cosmology Collaboration Network (ca-GrQc)}
+\subsubsection{General Relativity and Quantum Cosmology Collaboration Network (ca-GrQc)}
 
 The General Relativity and Quantum Cosmology Collaboration Network (ca-GrQc) represents scientific collaborations among authors who submitted papers to the General Relativity and Quantum Cosmology (GR-QC) category of arXiv. The dataset covers submissions from January 1993 to April 2003 and is provided by the Stanford Network Analysis Project (SNAP)~\cite{snap-ca-grqc}.
 
 Each node represents an author, and an undirected edge connects two authors who co-authored at least one paper. Papers with multiple authors form fully connected subgraphs (cliques). The network contains \textbf{5,242 nodes and 14,496 edges} and is undirected and unweighted, with multiple collaborations between the same authors represented by a single edge.
 
-The network provides a basis for examining scientific collaboration patterns, research communities, and connections between groups. Its structure is useful for studying clustering, connectivity, and degree distributions in academic collaboration networks.
+The network supports the study of research communities, clustering, and connectivity in scientific collaboration.
 
-\subsection{Western States Power Grid}
+\subsubsection{Western States Power Grid}
 
-The Western States Power Grid network represents the electrical transmission infrastructure of the western United States. The dataset is available through Mark Newman's Network Data Collection~\cite{newman-power-grid} and was used by Watts and Strogatz in their 1998 study, \emph{Collective dynamics of `small-world' networks}~\cite{watts1998smallworld}. The original study acknowledges J.\ Thorp and K.\ Bae for providing the power-grid data.
+The Western States Power Grid network represents the electrical transmission infrastructure of the western United States. It is available through Mark Newman's Network Data Collection~\cite{newman-power-grid} and was used in Watts and Strogatz's 1998 study of small-world networks~\cite{watts1998smallworld}.
 
 Nodes represent generators, transformers, or substations, while edges represent transmission lines connecting these facilities. The network contains \textbf{4,941 nodes and 6,594 edges} and is undirected and unweighted. It describes the physical connectivity of the power grid without including transmission capacities or electricity-flow directions.
 
-The network illustrates the structure of a large-scale infrastructure system shaped by geographical and engineering constraints. Its connectivity, clustering, and path-length properties are relevant to the study of small-world networks and comparisons with theoretical network models.
+The network supports comparisons of connectivity, clustering, and path lengths between physical infrastructure and theoretical network models.
 
 \begin{table}[htbp]
 \centering

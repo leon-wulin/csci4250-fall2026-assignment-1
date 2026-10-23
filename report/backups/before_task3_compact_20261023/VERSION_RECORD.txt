@@ -1,0 +1,4 @@
+Old PDF SHA256: 596CFA2A2EB0289AAEB3C78D271B018FBE230DE3F58C64FDEE2A271541180E76
+Promoted PDF SHA256: 89B565126677F93869AEB684DB93EF9D2AF043E3F4557CC98E4AB533AD720D3D
+Canonical source: report/main.tex -> sections/04_distributions.tex
+Original plots retained in results/plots/task3; compact plots retained in results/plots/task3_preview

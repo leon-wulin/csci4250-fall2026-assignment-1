@@ -16,20 +16,28 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
 \graphicspath{{../results/plots/}{../results/gephi/}}
+% Allow text and figures to share pages without sparse forced breaks.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
+\makeatletter
+\newenvironment{inlinefigure}{\par\medskip\noindent\begin{minipage}{\linewidth}\def\@captype{figure}}{\end{minipage}\par\medskip}
+\makeatother
 
 % Delete a \pending{...} line when the corresponding content is written.
 \newcommand{\pending}[1]{\par\smallskip\begingroup\color{gray}\itshape\sloppy\noindent[To complete: #1]\par\endgroup\smallskip}
 \newcommand{\missing}{\textemdash}
 
-\title{\bfseries Assignment 1: Network Analysis and Visualization\\
-  \large Frontiers of Network Science (CSCI 4250)}
-\author{Student: [Your Name]\\Fall 2026}
-\date{Due: October 23, 2026}
+\title{\bfseries Network Analysis and Visualization}
+\author{Lin Wu}
+\date{}
 
 \begin{document}
 \maketitle
-\noindent\textbf{Submission:} PDF report plus reproducible code/supporting files via Submitty.\\
-\noindent\textbf{Draft status:} Review draft for discussion; final revisions and submission approval are pending.
 \tableofcontents
 \clearpage
 
@@ -40,7 +48,6 @@
 \input{sections/05_comparison}
 \input{sections/06_methodology}
 \input{sections/07_visualization_optional}
-\clearpage
 \input{sections/references}
 
 \end{document}

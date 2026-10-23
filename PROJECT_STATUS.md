@@ -505,3 +505,54 @@ Read `AGENTS.md`, current Task 2/3 verification and `TASK3_REPRODUCIBILITY.md`. 
 - Reset JavaScript, reimported @oai/sky, and requested a fresh app inventory. Record its result in the follow-up. No project graph, report or GitHub file was changed.
 - Student handoff: open Edit environment variables for your account, append C:\Users\lin\AppData\Local\OpenAI\Codex\bin\e78bad9887fa50cf to User Path without replacing existing entries, save, then completely quit and relaunch the desktop client before continuing native Gephi tests. No Conda installation is needed.
 - Fresh sky.list_apps retest again returned failed to launch codex app-server: program not found. No window inventory or Gephi screenshot/click was reached; manual PATH update and client restart remain pending.
+
+### 2026-10-23 - Local MiKTeX compilation check
+- Student installed MiKTeX and requested a local rendering check. Verified executable C:\Program Files\MiKTeX\miktex\bin\x64\pdflatex.exe (MiKTeX 25.12, pdfTeX 4.23).
+- Sandboxed execution could not write MiKTeX cache. Authorized execution outside the sandbox initialized the user filename database, font maps and pdflatex format. Ran the existing report/build_report.ps1 with a process-only execution-policy bypass; no persistent execution-policy changes.
+- Compilation reaches main.tex but stops because geometry.sty is absent. Basic installation still needs report packages; the build script intentionally disables automatic installation. No package installation was performed, no report source changed, and existing report/report.pdf was preserved. Diagnostic: report/build/main.log.
+- Next: install required report packages through MiKTeX Console (starting with geometry), then rerun the existing build script and inspect the resulting PDF. Local successful PDF compilation is not yet verified.
+
+### 2026-10-23 - MiKTeX package recheck after student installation
+- Re-ran the existing local build script outside the sandbox. MiKTeX is now 26.5 (pdfTeX 4.27); refreshed startup state and format initialization completed.
+- A subsequent fresh compile still fails at main.tex because geometry.sty is not found. Successful report rendering remains unverified; report/report.pdf is preserved. No packages were installed by the assistant and no report sources changed.
+- Next: verify geometry is actually installed in the MiKTeX installation used by C:\Program Files\MiKTeX\miktex\bin\x64\pdflatex.exe, then compile again. See report/build/main.log.
+
+### 2026-10-23 - Geometry installation confirmed
+- MiKTeX packages info reports geometry 6.0 installed; kpsewhich resolves C:/Program Files/MiKTeX/tex/latex/geometry/geometry.sty. Fresh report compilation passes geometry and lmodern, then stops at missing microtype.sty. Previous geometry blocker is resolved. Existing report PDF preserved; no packages installed or source edits performed.
+
+### 2026-10-23 - Local LaTeX dependencies installed and build verified
+- Student explicitly authorized checking and installing all report dependencies. Verified direct packages, installed booktabs, then used a one-time pdflatex -enable-installer invocation to resolve missing transitive dependencies (including hyperref support packages). No persistent installer or execution-policy setting changed.
+- Existing report/build_report.ps1 then succeeded on both passes with automatic installation disabled, using C:\Program Files\MiKTeX\miktex\bin\x64\pdflatex.exe (MiKTeX 26.5). Updated report/report.pdf is 16 pages. Report sources and scientific results unchanged; no push or submission.
+
+### 2026-10-23 - Paper-style title block revision
+- Student requested removing the student label, due date, course name and submission text from the opening page. Updated report/main.tex title to Network Analysis and Visualization, author to Lin Wu, and an empty date. Removed semester, assignment-number prefix and visible draft/submission boilerplate; retained the existing contents and report body.
+- Existing build_report.ps1 succeeded on both passes and refreshed report/report.pdf. No scientific content changed and no GitHub push or submission occurred. Final student review remains pending regardless of removal of visible draft boilerplate.
+
+### 2026-10-23 - Task 1 background shortened
+- At student request, removed the power-grid data-provider acknowledgment, shortened the Watts-Strogatz background and condensed both networks' scientific-relevance paragraphs. Preserved dataset provenance/citations, construction details, original counts and graph definitions in report/sections/01_real_networks.tex.
+- Existing report build succeeded on both passes and refreshed report/report.pdf. No numerical results changed; no push or submission.
+
+### 2026-10-23 - Align section numbering with Tasks 1-5
+- Grouped both real-network descriptions under 1.1 Real-World Networks (individual networks at subsubsection level). Changed the independent ER/BA generation section to subsection 1.2 and removed its forced page break. Tasks 2-5 now retain matching top-level section numbers; scientific content unchanged.
+- Two-pass local build succeeded; report/report.pdf updated. No push or submission.
+
+### 2026-10-23 - Remove sparse third page
+- Removed forced clearpage before Task 2 so its text and metric tables follow the model-parameter table on page 3. Two-pass build succeeded; rendered and inspected page 3: three readable tables plus Task 2 explanation, without clipping. Updated report PDF; no numerical changes or push.
+
+### 2026-10-23 - Full-report pagination refinement
+- Removed unnecessary forced section/page breaks; retained 11pt body text. Figures and captions now form nonfloating unbreakable blocks following their relevant explanations. Adjusted float thresholds for tables, reduced optional network image maximum height from .77 to .62 textheight, placed those images after complete methods, and allowed references to follow preceding text.
+- Two-pass builds succeeded. Rendered every page for layout review during iterations; no undefined-reference or overfull-box warnings in checked final-layout build. Numerical content unchanged; no push/submission.
+
+### 2026-10-23 - Separate Task 3 presentation preview
+- Student requested preserving current charts/report and producing a modified PDF copy. Added report/main_task3_preview.tex, sections/04_distributions_preview.tex, scripts/preview_task3.mjs and four vector charts in results/plots/task3_preview/. Output: report/previews/task3/main_task3_preview.pdf (15 pages).
+- Uses frozen frequency CSVs only; no graphs regenerated, no statistics or fits recomputed. Degree/eccentricity figures remain unchanged. Clustering/component-size plots overlay all real/ER/BA empirical distributions, annotate zero masses/component counts, retain degenerate observations and apply small declared display offsets to overlapping markers. Exact-value clustering masses replace bin probabilities in this preview; original fitted plots remain preserved. No claim that this empirical-only preview fully meets the fit-line rubric.
+- Conda preflight failed with Illegal System DLL Relocation. Used existing Node/pdf-lib for presentation-only vector plots instead of Python; no environment packages installed. Preview compiled twice, all pages rendered and inspected, no undefined-reference/overfull warnings. Official report/main.tex, report/sections/04_distributions.tex, report/report.pdf and original chart files remain unchanged in this step. No push or submission.
+
+### 2026-10-23 - Promote compact Task 3 preview as current report
+- Student approved using the compact preview as the official working report and explicitly requested renaming the old version as backup, with deletion deferred. Moved the previous report/report.pdf to report/backups/before_task3_compact_20261023/report_before_task3_compact.pdf and promoted the preview PDF to report/report.pdf. SHA-256 checks verify both copies are byte-identical to their respective preceding versions; see VERSION_RECORD.txt in the backup folder.
+- Backed up the previous main.tex and Task 3 section, then copied the approved preview section into canonical report/sections/04_distributions.tex. Default main.tex and build_report.ps1 now build the compact version. Original Task 3 figures and separate preview sources remain preserved. No backups deleted and no GitHub push/submission.
+- This promotion changes the working-version designation only. The compact empirical-only plots still require resolving the rubric's fit-line requirement and removing preview-specific editorial wording during later refinement; student approval of final submission is not implied. No new analysis or compilation was needed for this byte-exact PDF promotion; the promoted PDF was already two-pass compiled and rendered in the preceding step.
+
+### 2026-10-23 - Authorized report refinement synchronization
+- Student explicitly requested Git push of the current version. Fetched origin/main before staging; no remote divergence was present. Synchronization includes paper-style title/author, shorter Task 1, Task-aligned numbering, pagination changes, compact Task 3 official working PDF and source, frozen-data plotting script/vector outputs, and the old report/source backup with hash record.
+- Preserved original plots and scientific tables. Excluded preview build auxiliary files via /report/previews/; retained reusable preview source. No raw inputs, local logs, environments or account configuration included. The working report retains documented fit-line/editorial refinements pending; no final submission implied.

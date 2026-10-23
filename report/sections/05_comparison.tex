@@ -1,3 +1,4 @@
+
 \section{Task 4: Comparison and Interpretation}
 
 \subsection{ca-GrQc: Real vs ER vs BA}
@@ -13,4 +14,3 @@ ER is closer to the Power Grid's degree variability: its variance is 2.465, comp
 This agreement does not extend to connectivity or distances. The real grid is connected, while ER has 387 components, including 345 isolates; BA is connected (Table~\ref{tab:global-connectivity}; Figure~\ref{fig:components-power}). Nevertheless, both models have much smaller mean eccentricities: 14.924 for ER and 14.390 for BA, versus 34.541 for the real grid (Figure~\ref{fig:ecc-power}). ER distances describe only its LCC. The real grid's longer distances are consistent with geographically constrained infrastructure, although these measurements do not establish that explanation causally.
 
 Mean clustering is 0.080104 in the real grid, 0.000502 in ER, and zero in BA (Figure~\ref{fig:clustering-power}). BA's zero clustering follows from its $m=1$ tree construction. Its 25.08\% edge deficit (Table~\ref{tab:model-parameters}) also confounds structural comparisons, so differences cannot be attributed solely to attachment rules. ER better approximates degree variability and BA preserves connectedness, but neither reproduces the grid's clustering and eccentricity. Across both datasets, conclusions concern single seeded realizations with unequal realized edge counts, not ensemble-level model performance.
-\clearpage

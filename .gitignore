@@ -8,6 +8,7 @@ __pycache__/
 /results/cache/
 /results/logs/
 /report/build/
+/report/previews/
 
 # Windows/editor
 Thumbs.db

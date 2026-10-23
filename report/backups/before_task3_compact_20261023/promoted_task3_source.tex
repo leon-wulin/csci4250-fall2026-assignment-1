@@ -1,0 +1,90 @@
+
+\section{Task 3: Network Distributions}
+\begingroup
+\setlength{\emergencystretch}{1em}
+\setlength{\textfloatsep}{8pt}
+\setlength{\intextsep}{7pt}
+
+Four distributions are reported for each network. Degree and local clustering use all nodes; eccentricity uses exact Task 2 results on the LCC; component size uses one observation per component, including the LCC. Table~\ref{tab:distribution-summary} gives means and population variances ($\mathrm{ddof}=0$), calculated from original observations. Probabilities are normalized by the relevant sample size. Logarithmic axes are used where appropriate; degree plots preserve zero using a symmetric logarithmic horizontal scale. Clustering uses 20 equal-width interior bins and separate zero/one masses. Curves are descriptive, not significance tests; detailed fitting settings are documented in the supporting reproduction guide.
+
+\begin{table}[!htbp]
+\centering
+\caption{\textbf{Distribution means and population variances.} Eccentricity uses LCC nodes; clustering uses all nodes; component size uses one observation per component, including the LCC.}
+\label{tab:distribution-summary}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}Xrrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{Eccentricity} & \multicolumn{2}{c}{Local clustering} & \multicolumn{2}{c}{Component size} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(l){6-7}
+Network & Mean & Variance & Mean & Variance & Mean & Variance \\
+\midrule
+ca-GrQc (real) & 11.675 & 1.204 & 0.529636 & 0.183768 & 14.766 & 48,495.396 \\
+ca-GrQc (ER) & 8.047 & 0.206 & 0.000921 & 0.000092 & 275.895 & 1,359,658.410 \\
+ca-GrQc (BA) & 5.686 & 0.227 & 0.009484 & 0.002331 & 5,242.000 & 0 \\
+Power Grid (real) & 34.541 & 13.827 & 0.080104 & 0.050260 & 4,941.000 & 0 \\
+Power Grid (ER) & 14.924 & 1.153 & 0.000502 & 0.000281 & 12.767 & 52,257.104 \\
+Power Grid (BA) & 14.390 & 2.701 & 0 & 0 & 4,941.000 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+\subsection{Degree Distribution}
+Figures~\ref{fig:degree-grqc} and~\ref{fig:degree-power} show empirical degree probabilities. Real-network curves use shifted negative-binomial fits with a separate zero mass; ER curves use $\mathrm{Binomial}(N-1,p)$ references. BA curves fit discrete power-law tails only, scaled by the empirical tail fraction. These fits do not establish a power-law hypothesis~\cite{clauset2009powerlaw}. Degree means and variances appear in Table~\ref{tab:global-distances}.
+
+\begin{inlinefigure}
+\centering\small\includegraphics[width=0.96\linewidth]{task3/grqc__degree.pdf}
+\caption{\textbf{Degree distributions for ca-GrQc and its ER/BA counterparts.} All nodes are included. Dashed curves show the real-network count fit, ER reference, and BA tail fit, respectively.}
+\label{fig:degree-grqc}
+\end{inlinefigure}
+\begin{inlinefigure}
+\centering\small\includegraphics[width=0.96\linewidth]{task3/power__degree.pdf}
+\caption{\textbf{Degree distributions for Power Grid and its ER/BA counterparts.} The BA curve describes degrees $k\geq5$ only; the full empirical distribution is retained.}
+\label{fig:degree-power}
+\end{inlinefigure}
+
+
+
+\subsection{Longest-Shortest-Path (Eccentricity) Distribution}
+Eccentricity is $e(v)=\max_{u\in\mathrm{LCC}}d(v,u)$, measured in hops. Figures~\ref{fig:ecc-grqc} and~\ref{fig:ecc-power} use one observation per LCC node. Curves are bounded discrete-normal fits, except for Power Grid BA, which uses a beta-binomial fit. All curves are restricted to the observed integer support from radius to diameter.
+
+\begin{inlinefigure}
+\centering\small\includegraphics[width=0.96\linewidth]{task3/grqc__eccentricity.pdf}
+\caption{\textbf{Eccentricity distributions for ca-GrQc and its ER/BA counterparts.} Each observation is an LCC node. Dashed curves are bounded discrete-normal fits on the observed integer supports.}
+\label{fig:ecc-grqc}
+\end{inlinefigure}
+\begin{inlinefigure}
+\centering\small\includegraphics[width=0.96\linewidth]{task3/power__eccentricity.pdf}
+\caption{\textbf{Eccentricity distributions for Power Grid and its ER/BA counterparts.} Curves are bounded discrete-normal fits for real/ER and a beta-binomial fit for BA. Distances are in hops.}
+\label{fig:ecc-power}
+\end{inlinefigure}
+
+
+
+\subsection{Clustering-Coefficient Distribution: Compact Preview}
+Each panel overlays the real, ER and BA empirical probability masses, using the same observations as the original plots. The zero-mass labels make sparse distributions explicit. Power Grid BA has $P(C=0)=1$: all 4,941 nodes have zero clustering because $m=1$ produces a tree. Power Grid ER has only nine nonzero observations, so a continuous fit is not supported. No new fit was estimated for this presentation preview; the original fitted/binned plots remain available for the final rubric-compliant version. Exact-value probabilities here differ from the original interior-bin probabilities. Markers are offset slightly in display space to reveal coincident points; numerical coordinates are unchanged.
+\begin{inlinefigure}
+\centering\includegraphics[width=\linewidth]{task3_preview/grqc__clustering.pdf}
+\caption{Compact empirical clustering comparison for ca-GrQc. All nodes are included; zero masses are explicitly reported.}
+\label{fig:clustering-grqc}
+\end{inlinefigure}
+\begin{inlinefigure}
+\centering\includegraphics[width=\linewidth]{task3_preview/power__clustering.pdf}
+\caption{Compact empirical clustering comparison for Power Grid. The BA point at zero is a degenerate distribution, not missing data.}
+\label{fig:clustering-power}
+\end{inlinefigure}
+\subsection{Connected-Component Size Distribution: Compact Preview}
+Each observation is one component of the whole graph. Connected networks are retained as probability-one points: ca-GrQc BA has one component of size 5,242; Power Grid real and BA each have one component of size 4,941. Their population variances are zero. These cases require no fitted curve. Original nondegenerate fitting results and limitations remain documented in the unchanged plots; this preview compares empirical masses only. All means and variances in Table~\ref{tab:distribution-summary} remain unchanged.
+\begin{inlinefigure}
+\centering\includegraphics[width=\linewidth]{task3_preview/grqc__component_size.pdf}
+\caption{Compact component-size comparison for ca-GrQc. The single-component BA result is retained and labeled.}
+\label{fig:components-grqc}
+\end{inlinefigure}
+\begin{inlinefigure}
+\centering\includegraphics[width=\linewidth]{task3_preview/power__component_size.pdf}
+\caption{Compact component-size comparison for Power Grid. The real and BA probability-one points coincide; small display offsets reveal both.}
+\label{fig:components-power}
+\end{inlinefigure}
+\endgroup
